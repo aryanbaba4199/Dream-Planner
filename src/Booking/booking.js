@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./booking.css";
+import userEvent from "@testing-library/user-event";
 
 const WeddingBooking = () => {
   const [name, setName] = useState("");
@@ -7,7 +8,29 @@ const WeddingBooking = () => {
   const [mobile, setMobile] = useState("");
   const [services, setServices] = useState([]);
   const [bookingConfirmed, setBookingConfirmed] = useState(false);
+  const [selectedFunctionType, setSelectedFunctionType] = useState("");
+  const [msg , setmsg] = useState("");
 
+  const functionType = [
+    {
+      fntype: "Wedding ( Bride )",
+    },
+    {
+      fntype: "Wedding ( Groom )",
+    },
+    {
+      fntype: "Pre-Wedding",
+    },
+    {
+      fntype: "Post-Wedding",
+    },
+    {
+      fntype: "Engagement Ceremony",
+    },
+    {
+      fntype: "Birthday Celebration",
+    },
+  ];
   const availableServices = [
     {
       serviceName: "Event Planning",
@@ -58,8 +81,14 @@ const WeddingBooking = () => {
       serviceName: "Wedding Clothes",
     },
 
+    // You can Select Deeply here
+
     // Your service data here
   ];
+
+  const handleFunctionTypeChange = (event) => {
+    setSelectedFunctionType(event.target.value);
+  };
 
   const handleServiceChange = (event) => {
     const serviceName = event.target.value;
@@ -77,10 +106,16 @@ const WeddingBooking = () => {
       address,
       mobile,
       selectedServices: services,
+      msg,
+      selectedFunctionType: functionType.find((fn) =>
+        services.includes(fn.fntype)
+      ),
+      
     };
+    console.log("Booking Data:", bookingData);
 
     try {
-      const response = await fetch("https://dpapi.onrender.com/api/bookings", {
+      const response = await fetch("https://dpapi-omega.vercel.app/api/bookings", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -103,68 +138,100 @@ const WeddingBooking = () => {
 
   return (
     <>
-    <div className="blank"></div>
-    <div className="wholepage">
-      <h2 className="usercontainer">Fill Details</h2>
-      <div className="userdiv">
-        <div className="userdetail">
-          <label>Name :</label>
-          <input
-            type="text"
-            className="label"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
+      <div className="blank"></div>
+      <div className="wholepage">
+        <h2 className="usercontainer">Fill Details</h2>
+        <div className="userdiv">
+          <div className="userdetail">
+            <label>Name :</label>
+            <input
+              type="text"
+              className="label"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+          <div className="userdetail">
+            <label>City :</label>
+            <input
+              type="text"
+              className="label"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+            />
+          </div>
+          <div className="userdetail">
+            <label>Mobile No. :</label>
+            <input
+              type="text"
+              className="label"
+              value={mobile}
+              onChange={(e) => setMobile(e.target.value)}
+            />
+          </div>
         </div>
-        <div className="userdetail">
-          <label>City :</label>
-          <input
-            type="text"
-            className="label"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-          />
+
+        <div className="bookingcontainer">
+          <h3 className="serve">Select Your Function</h3>
+          <div className="bookservices">
+            {functionType.map((fn, index) => (
+              <div className="servic" key={index}>
+                <label className="checkbox">
+                  <input
+                    type="radio"
+                    className="checktitle"
+                    value={fn.fntype}
+                    onChange={handleFunctionTypeChange}
+                    checked={selectedFunctionType === fn.fntype}
+                  />
+                  {fn.fntype}
+                </label>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="userdetail">
-          <label>Mobile No. :</label>
-          <input
-            type="text"
-            className="label"
-            value={mobile}
-            onChange={(e) => setMobile(e.target.value)}
-          />
+
+        <div className="bookingcontainer">
+          <h3 className="serve">Mark Your Need</h3>
+          <div className="bookservices">
+            {availableServices.map((service, index) => (
+              <div className="servic" key={index}>
+                <label className="checkbox">
+                  <input
+                    type="checkbox"
+                    className="checktitle"
+                    value={service.serviceName}
+                    onChange={handleServiceChange}
+                    checked={services.includes(service.serviceName)}
+                  />
+                  {service.serviceName}
+                </label>
+              </div>
+            ))}
+          </div>
         </div>
+        <div className=""></div>
+
+        <div className="msg-holder">
+          <label className="msgtitle">
+            Explain Your Function
+            <input type="text" value={msg} className="msgbox" onChange={(e)=>setmsg(e.target.value)} >
+            </input>
+
+          </label>
+        </div>
+
+        <div className="bookbtn">
+          <h2 onClick={handleBook} className="bookbtnin">
+            Book
+          </h2>
+        </div>
+        {bookingConfirmed && (
+          <p className="cnfmsg">
+            Booking in process. Our planner will contact you soon.
+          </p>
+        )}
       </div>
-      <div className="bookingcontainer">
-        <h3 className="serve">Mark Your Need</h3>
-        <div className="bookservices">
-          {availableServices.map((service, index) => (
-            <div className="service" key={index}>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  className="checktitle"
-                  value={service.serviceName}
-                  onChange={handleServiceChange}
-                  checked={services.includes(service.serviceName)}
-                />
-                {service.serviceName}
-              </label>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="bookbtn">
-        <button onClick={handleBook} className="bookbtnin">
-          Book
-        </button>
-      </div>
-      {bookingConfirmed && (
-        <p className="cnfmsg">
-          Booking in process. Our planner will contact you soon.
-        </p>
-      )}
-    </div>
     </>
   );
 };
