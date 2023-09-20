@@ -10,22 +10,30 @@
 
 .bookingcontainer {
     color: white;
+    
 }
 
-.services {
-    display: flex;
-    flex-wrap: wrap;
+.servic {
+   
+    
     justify-content: space-between;
+    border-radius: 10px;
 }
 
-.bookservice {
-    width: 1.4375rem; /* 23px / 16 */
-    margin: 0.625rem; /* 10px / 16 */
+.bookservices {
+    width: auto;
+    margin: 1rem;
     text-align: center;
     color: white;
-    box-shadow: 0 0 0.9375rem rgb(146, 0, 0); /* 15px / 16 */
-    border-radius: 1.25rem; /* 20px / 16 */
+    background-color: black;
+    padding: 1rem;
+    box-shadow: 0 0 2rem rgb(245, 132, 2);
+    border-radius: 1.25rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;    
 }
+
 
 .service img {
     max-width: 100%;
@@ -90,30 +98,58 @@
 .checkbox {
     margin: 0.625rem; /* 10px / 16 */
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    width: 20rem;
     font-size: 1.125rem; /* 18px / 16 */
+    box-shadow: 0.5rem 0.5rem, 1rem, rgba(255, 166, 2, 0.2);
+    text-shadow: 0.3rem 0.3rem 1rem rgba(255, 2, 2, 0.5);
+}
+
+.msg-holder{
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 2rem;
+}
+.msgtitle{
+    display: flex;
+    font-size: 1.125rem; /* 18px / 16 */
+    box-shadow: 0.5rem 0.5rem, 1rem, rgba(255, 166, 2, 0.2);
+    text-shadow: 0.3rem 0.3rem 1rem rgba(255, 2, 2, 0.5);
+}
+.msgbox{
+    margin-top: 1rem;
 }
 
 .bookbtn {
     display: flex;
     justify-content: center;
-    width: 12.5rem; /* 200px / 16 */
-    margin-left: 3rem; /* 48px / 16 */
+    color: white;
+    text-shadow: 0.3rem 0.3rem 1rem rgba(255, 2, 2, 0.5);
+    box-shadow: 0.5rem 0.5rem, 1rem, rgba(255, 166, 2, 0.2);
 }
 
 .bookbtnin {
-    background-color: black;
-    width: 9.375rem; /* 150px / 16 */
-    color: white;
-    border-radius: 1.25rem; /* 20px / 16 */
+    
+     /* 150px / 16 */
+    color: white; /* Change text color to white */
+    border-radius: 0.5rem; /* 20px / 16 */
     font-size: 1.5625rem; /* 25px / 16 */
     margin-bottom: 3.125rem; /* 50px / 16 */
+    background-color: black;
+    padding: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     &:hover {
         box-shadow: 0 0 1.5625rem goldenrod; /* 25px / 16 */
         width: 12.5rem; /* 200px / 16 */
-        height: 3.125rem; /* 50px / 16 */
+        height: 3.125rem;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
     }
 }
+
 
 .cnfmsg {
     margin: 1.25rem; /* 20px / 16 */
@@ -123,6 +159,7 @@
     margin-bottom: 3.125rem; /* 50px / 16 */
     font-size: 1.25rem; /* 20px / 16 */
 }
+
 
 @media (max-width: 55.625rem) { /* 890px / 16 */
     .wholepage {
