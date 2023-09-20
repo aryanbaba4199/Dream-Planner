@@ -1,0 +1,55 @@
+
+.wholeco{
+    color: white;
+    background-color: rgb(27, 27, 27);
+    margin-top: 8.6rem;
+    
+    
+}
+.dpinfo{
+    margin-bottom: 5rem;
+    font-size: 3rem;
+    margin-top: 1rem;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase; 
+    font-weight: bold;
+    text-shadow: 0.3rem 0.3rem 1rem rgba(255, 2, 2, 0.5);
+    letter-spacing: 0.2rem; 
+    background-color: rgba(0, 0, 0, 0.2); 
+    padding: 1rem 2rem; 
+    border-radius: 10px; 
+    box-shadow: 0.5rem 0.5rem, 1rem, rgba(255, 166, 2, 0.2); /* Add box shadow for depth */
+  }
+  .dpinfo h5{
+    font-size: 1rem;
+  }
+  .topicdiv{
+    margin: 2rem;
+    
+  }
+
+  .topicstyle{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase; 
+   
+    text-shadow: 0.3rem 0.3rem 1rem rgba(255, 2, 2, 0.5);
+    letter-spacing: 0.2rem; 
+    background-color: rgba(0, 0, 0, 0.2); 
+    padding: 1rem 2rem; 
+    border-radius: 10px; 
+    box-shadow: 0.5rem 0.5rem, 1rem, rgba(255, 166, 2, 0.2);
+  }
+  .tdetail{
+    margin-left: 2rem;
+    display: flex;
+    justify-content: left;
+    color : goldenrod;
+    padding: 1rem 2rem; 
+    background-color: black;
+    border-radius: 10px; 
+    box-shadow: 0.5rem 0.5rem, 1rem, rgba(210, 39, 1, 0.2);
+  }
+ 
+  

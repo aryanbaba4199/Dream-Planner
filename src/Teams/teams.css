@@ -1,0 +1,59 @@
+.services {
+    display: flex;
+    flex-wrap: wrap;
+   
+    justify-content: space-between;
+    margin: 0.2rem;
+    background-color: black;
+  }
+  .wholt{
+    display: block;
+    width: 100%;
+    
+  }
+  
+  .ts{
+   margin-top: 5px;
+   font-size: 20px;
+   
+  }
+  
+  .service img {
+    max-width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: black;
+    
+    
+  }
+  
+ 
+  .ts{
+    background-color: rgba(217, 97, 27, 0.8); /* Adjust the color and opacity as needed */
+    color: white; /* Set text color to white for better contrast */
+    padding: 5px 10px; /* Adjust padding as needed */
+    border-radius: 5px; /* Add rounded corners */
+    border-radius: 10px;
+    box-shadow: 0 0 100px rgb(0, 0, 0);
+    
+    text-align: center; /* Center the text horizontally within the background */
+    margin-bottom: 20px;
+  }
+  
+
+
+  .imgprop{
+    
+    border: 50%;
+  }
+  @media(max-width : 800){
+    .wholt{
+      display: block;
+      border: 2px solid goldenrod;
+    }
+    .services{
+      flex-direction: row;
+    }
+    
+    
+  }

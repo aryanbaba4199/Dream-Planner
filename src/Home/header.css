@@ -1,0 +1,159 @@
+
+.wholeheader {
+  display: flex;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  left: 0;
+  
+  right: 0;
+  background-color: #333;
+
+}
+
+
+
+
+
+
+
+.tab {
+  display: flex;
+  align-items: flex-end;
+  width: 31.25rem; /* 500px / 16px = 31.25rem */
+  background-color: #333; /* Change this to your desired background color */
+  color: #fff; /* Change this to your desired text color */
+  padding: 0.625rem 0; /* 10px / 16px = 0.625rem */
+}
+
+.logo-holder {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.imglogo {
+  border-radius: 50%;
+}
+
+.part2 {
+  margin-left: 0.625rem; /* 10px / 16px = 0.625rem */
+  display: flex;
+  justify-content: center;
+  float: right;
+}
+
+.bio {
+  display: flex;
+  padding: 0.625rem 1.25rem; /* 10px / 16px = 0.625rem and 20px / 16px = 1.25rem */
+  margin-left: 0.3125rem; /* 5px / 16px = 0.3125rem */
+  background-color: black;
+  color: rgb(244, 244, 244);
+  border: none;
+  cursor: pointer;
+  border: 0.125rem solid goldenrod; /* 2px / 16px = 0.125rem */
+  margin-top: 3.75rem; /* 60px / 16px = 3.75rem */
+  border-radius: 0.625rem; /* 10px / 16px = 0.625rem */
+  width: 6.875rem; /* 110px / 16px = 6.875rem */
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem; /* 40px / 16px = 2.5rem */
+}
+
+.bio:hover {
+  background-color: black;
+  color: rgb(251, 251, 251);
+  font-style: italic;
+  box-shadow: 1.25rem 1.25rem 1.25rem rgb(195, 101, 7); /* 20px / 16px = 1.25rem */
+  width: auto; /* 120px / 16px = 7.5rem */
+  height: 3.125rem; /* 50px / 16px = 3.125rem */
+}
+
+.social-iconin {
+  margin: 0.625rem; /* 10px / 16px = 0.625rem */
+  margin-left: 1.25rem; /* 20px / 16px = 1.25rem */
+}
+
+.social-icon {
+  margin: 0.625rem; /* 10px / 16px = 0.625rem */
+}
+
+.sitenamecontainer {
+  margin-left: 1.25rem; /* 20px / 16px = 1.25rem */
+  font-weight: bold;
+  text-transform: uppercase; /* Optional: Uppercase text */
+  font-size: 2.25rem; /* 36px / 16px = 2.25rem */
+}
+
+.sitename {
+  color: rgb(255, 118, 39);
+  text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5); /* 10px / 16px = 0.625rem */
+  transform: perspective(62.5rem) rotateY(0.625deg); /* 1000px / 16px = 62.5rem */
+}
+
+.sitename1 {
+  color: rgb(77, 169, 255);
+  text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5); /* 10px / 16px = 0.625rem */
+  margin-left: 1.25rem; /* 20px / 16px = 1.25rem */
+  transform: perspective(62.5rem) rotateY(0.625deg); /* 1000px / 16px = 62.5rem */
+}
+
+.slogan {
+  font-size: 1rem; /* 16px / 16px = 1rem */
+  color: rgb(32, 196, 255);
+}
+
+.snc {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2.5rem; /* 40px / 16px = 2.5rem */
+}
+
+/* for Responsiveness */
+@media (max-width: 768px) { /* 890px / 16px = 55.625rem */
+  .wholeheader {
+    position: fixed;
+    display: flex;
+    z-index: 100;
+    width: auto;
+    height : auto;
+    
+    top: 0;
+    flex-direction: column; /* Display items in a column */
+  }
+  .part2 {
+    margin-top: -1.875rem; /* 30px / 16px = 1.875rem */
+    overflow: auto;
+    width: auto;
+    float: left;
+  }
+  .sitenamecontainer {
+    font-weight: bold;
+    text-transform: uppercase; /* Optional: Uppercase text */
+  }
+  .sitename {
+    font-size: 1.25rem; /* 20px / 16px = 1.25rem */
+    margin-left: -2.5rem; /* 40px / 16px = 2.5rem */
+    margin-right: -3.125rem; /* 50px / 16px = 3.125rem */
+    color: rgb(255, 118, 39);
+    text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5); /* 10px / 16px = 0.625rem */
+    transform: perspective(62.5rem) rotateY(0.625deg); /* 1000px / 16px = 62.5rem */
+  }
+  .sitename1 {
+    font-size: 1.25rem; /* 20px / 16px = 1.25rem */
+    margin-left: -1.25rem; /* 20px / 16px = 1.25rem */
+    color: rgb(77, 169, 255);
+    text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5); /* 10px / 16px = 0.625rem */
+    transform: perspective(62.5rem) rotateY(0.625deg); /* 1000px / 16px = 62.5rem */
+  }
+  .slogan {
+    font-size: 0.8125rem; /* 13px / 16px = 0.8125rem */
+    color: rgb(32, 196, 255);
+  }
+  .social-iconin {
+    display: none;
+  }
+  .social-icon {
+    display: none;
+  }
+}
