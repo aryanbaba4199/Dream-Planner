@@ -80,7 +80,7 @@ const WeddingBooking = () => {
     };
 
     try {
-      const response = await fetch("https://dpapi.onrender.com/api/bookings", {
+      const response = await fetch("https://vercel.com/aryanbaba4199/dream-planner/api/bookings", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
