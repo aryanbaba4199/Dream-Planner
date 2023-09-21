@@ -1,35 +1,41 @@
 /* service.css */
 .serviceblank{
-  display: none;
-  height: 6rem;
+  height: 8rem;
+  display: block;
 }
 
-.services {
-  display: flex;
-  
-  flex-wrap: wrap;
-  padding : 2rem;
-  justify-content: space-between;
-  margin: 1rem;
+.servicelist {
+    width: auto;
+    margin: 1rem;
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 1rem;
+    box-shadow: 0 0 2rem rgb(245, 132, 2);
+    border-radius: 1.25rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.service {
-  width: 23%; /* Adjust the width as needed */
-  margin-bottom: 20px;
+.servicediv{
+  width: auto; /* Adjust the width as needed */
+  margin-bottom: 2rem;
   text-align: center;
-  box-shadow: 0 0 50px rgb(184, 17, 17);
+  border-radius: 1.0rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem;
+  box-shadow: 0 0 4rem rgb(184, 17, 17);
 }
 
-.service img {
-  max-width: 500px;
-  height: 200px;
-  border-radius: 20px;
+.servicediv img {
+  max-width: 50rem;
+  height: 20rem;
+  border-radius: 1.8rem;
 }
 
-.service h5 {
-  margin-top: 10px;
-  font-size: 16px;
-}
+
 
 .serviceNameBackground {
   background-color: rgba(217, 97, 27, 0.8);
@@ -38,19 +44,21 @@
   border-radius: 10px;
   box-shadow: 0 0 100px rgb(0, 0, 0);
   text-align: center;
+  margin: 1rem;
   margin-bottom: 20px;
 }
 
 .imgprop {
-  border: 50%;
+  width: 25rem;
+  height: 20rem;
+  border-radius: 2rem;
+  margin: 1rem;
 }
 
 @media (max-width: 768px) {
   
-  .services{
-    
-     
-    
+  .serviceblank{
+    display: block;
   }
   
   .service{
@@ -59,12 +67,7 @@
   .serviceNameBackground{
     width: auto;
   }
-  .imgprop{
-    
-  }
-  .serviceblank{
-    display: none;
-    height: 6rem;
-  }
+  
+  
   
 }

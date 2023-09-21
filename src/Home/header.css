@@ -3,24 +3,19 @@
   display: flex;
   z-index: 100;
   width: 100%;
+  height: 7.5rem;
   top: 0;
   left: 0;
-  
-  right: 0;
+  position: fixed;
   background-color: #333;
-
 }
 
 
-
-
-
-
-
 .tab {
+
   display: flex;
-  align-items: flex-end;
-  width: 31.25rem; /* 500px / 16px = 31.25rem */
+  align-items: flex-start;
+  width: auto; /* 500px / 16px = 31.25rem */
   background-color: #333; /* Change this to your desired background color */
   color: #fff; /* Change this to your desired text color */
   padding: 0.625rem 0; /* 10px / 16px = 0.625rem */
@@ -29,18 +24,28 @@
 .logo-holder {
   display: flex;
   align-items: center;
-  margin-left: 5px;
+  margin-left: 0.3rem;
 }
 
 .imglogo {
   border-radius: 50%;
 }
-
-.part2 {
-  margin-left: 0.625rem; /* 10px / 16px = 0.625rem */
+.sitenamecontainer {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase; /* Optional: Uppercase text */
+  font-size: 2.25rem; /* 36px / 16px = 2.25rem */
+}
+.snc {
   display: flex;
-  justify-content: center;
-  float: right;
+}
+
+.part2{
+  margin-left: 1rem; /* 10px / 16px = 0.625rem */
+  display: flex;
+  height: 2.5rem;
+  margin-top: 0.5rem;
+  
 }
 
 .bio {
@@ -49,15 +54,11 @@
   margin-left: 0.3125rem; /* 5px / 16px = 0.3125rem */
   background-color: black;
   color: rgb(244, 244, 244);
-  border: none;
   cursor: pointer;
   border: 0.125rem solid goldenrod; /* 2px / 16px = 0.125rem */
-  margin-top: 3.75rem; /* 60px / 16px = 3.75rem */
-  border-radius: 0.625rem; /* 10px / 16px = 0.625rem */
-  width: 6.875rem; /* 110px / 16px = 6.875rem */
-  justify-content: center;
+  border-radius: 0.625rem; 
   align-items: center;
-  height: 2.5rem; /* 40px / 16px = 2.5rem */
+  height: auto;
 }
 
 .bio:hover {
@@ -78,14 +79,10 @@
   margin: 0.625rem; /* 10px / 16px = 0.625rem */
 }
 
-.sitenamecontainer {
-  margin-left: 1.25rem; /* 20px / 16px = 1.25rem */
-  font-weight: bold;
-  text-transform: uppercase; /* Optional: Uppercase text */
-  font-size: 2.25rem; /* 36px / 16px = 2.25rem */
-}
+
 
 .sitename {
+
   color: rgb(255, 118, 39);
   text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5); /* 10px / 16px = 0.625rem */
   transform: perspective(62.5rem) rotateY(0.625deg); /* 1000px / 16px = 62.5rem */
@@ -101,59 +98,74 @@
 .slogan {
   font-size: 1rem; /* 16px / 16px = 1rem */
   color: rgb(32, 196, 255);
-}
-
-.snc {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 2.5rem; /* 40px / 16px = 2.5rem */
+  font-size: 1rem;
 }
 
 /* for Responsiveness */
 @media (max-width: 768px) { /* 890px / 16px = 55.625rem */
   .wholeheader {
-    position: fixed;
     display: flex;
-    z-index: 100;
     width: auto;
-    height : auto;
-    
+    margin-top: -1rem;
+    height : 12rem;
     top: 0;
     flex-direction: column; /* Display items in a column */
   }
   .part2 {
-    margin-top: -1.875rem; /* 30px / 16px = 1.875rem */
-    overflow: auto;
-    width: auto;
-    float: left;
+    display: flex;
+    font-size: 1rem;
+    
+    margin: 0.2rem;
+    max-height: none; /* Remove the maximum height for larger screens */
+    height: 2.5rem; /* Set the desired height for PC view */
+    overflow: visible;
+    flex-wrap: wrap;
+    
+  }
+  .bio{
+    width: 6rem;
+    height: 2.5rem;
   }
   .sitenamecontainer {
+    margin-left: 3rem;
     font-weight: bold;
+    margin-bottom: 0rem;
     text-transform: uppercase; /* Optional: Uppercase text */
   }
   .sitename {
     font-size: 1.25rem; /* 20px / 16px = 1.25rem */
-    margin-left: -2.5rem; /* 40px / 16px = 2.5rem */
-    margin-right: -3.125rem; /* 50px / 16px = 3.125rem */
+
+    margin-right: -3.125rem;
+    margin-top : 1rem; /* 50px / 16px = 3.125rem */
     color: rgb(255, 118, 39);
     text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5); /* 10px / 16px = 0.625rem */
     transform: perspective(62.5rem) rotateY(0.625deg); /* 1000px / 16px = 62.5rem */
   }
   .sitename1 {
+    margin-top: 1rem;
     font-size: 1.25rem; /* 20px / 16px = 1.25rem */
-    margin-left: -1.25rem; /* 20px / 16px = 1.25rem */
+    margin-left: 4rem; /* 20px / 16px = 1.25rem */
     color: rgb(77, 169, 255);
     text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5); /* 10px / 16px = 0.625rem */
     transform: perspective(62.5rem) rotateY(0.625deg); /* 1000px / 16px = 62.5rem */
   }
   .slogan {
+    margin-top: 1rem;
     font-size: 0.8125rem; /* 13px / 16px = 0.8125rem */
     color: rgb(32, 196, 255);
+    margin-left: -1rem;
   }
   .social-iconin {
     display: none;
   }
   .social-icon {
     display: none;
+  }
+  .imglogo{
+    width: 5rem;
+    height: 5rem;
+  }
+  .logo-holder img{
+
   }
 }

@@ -1,5 +1,8 @@
 /* styles.css */
-
+.jobblank{
+  height: 8rem;
+  display: none;
+}
 .wcarholder {
     margin: 0; /* Remove the top margin to fit the image */
     padding: 0;
@@ -102,5 +105,13 @@
   
   button:hover {
     background-color: #0056b3;
+  }
+  @media(max-width : 768px){
+    .jobblank{
+      display: block;
+    }
+    .wcarholder{
+      width: auto;
+    }
   }
   

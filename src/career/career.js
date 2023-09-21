@@ -71,6 +71,8 @@ const WeddingPlannerJobApplication = () => {
 
 
   return (
+    <>
+    <div className='jobblank'></div>
     <div className='wcarholder'>
       <h1 className='title'>Wedding Planner Job Application</h1>
       <form onSubmit={handleSubmit}>
@@ -153,6 +155,7 @@ const WeddingPlannerJobApplication = () => {
         <button type="submit">Apply</button>
       </form>
     </div>
+    </>
   );
 };
 

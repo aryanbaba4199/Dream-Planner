@@ -59,6 +59,7 @@ const Teams = () => {
 
   return (
     <>
+    <div className="teamblank"></div>
     <div className="wholt">
       <h1>Meet Our Team Memebers</h1>
     </div>

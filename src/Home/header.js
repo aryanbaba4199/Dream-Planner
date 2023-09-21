@@ -45,10 +45,8 @@ function Tabmenu() {
     <>
     <div className="headerblank"></div>
       <Router>
-      
         <div className="wholeheader">
         <div className="appdownload">
-      
     </div>
           <div className="tab">
 
@@ -80,7 +78,7 @@ function Tabmenu() {
             <Nav.Link className="bio" href="/gallery">Glimpse</Nav.Link>
             <Nav.Link className="bio" href="/teams">Teams</Nav.Link>
             <Nav.Link className="bio" href="/career">Career</Nav.Link>
-            <Nav.Link className="bio" href="/about">About us</Nav.Link>
+            <Nav.Link className="bio" href="/about">About</Nav.Link>
           </div>
 
           {/* Add other navigation links as needed */}

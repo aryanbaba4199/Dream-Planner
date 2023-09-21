@@ -3,8 +3,8 @@
 }
 .blank{
     width: auto;
-    height: 6rem;
-    display: none;
+    height: 6.5rem;
+    display: block;
 }
 
 
@@ -163,7 +163,7 @@
 
 @media (max-width: 55.625rem) { /* 890px / 16 */
     .wholepage {
-        margin-top: 8.75rem; /* 140px / 16 */
+        margin-top: 4rem; /* 140px / 16 */
         flex-direction: row;
         width: auto;
     }

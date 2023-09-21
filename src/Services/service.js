@@ -1,8 +1,8 @@
 import React from 'react';
 import './service.css'
 
-const Service = ({ imageSrc, serviceName }) => (
-    <div className="service">
+const Serviceprovider = ({ imageSrc, serviceName }) => (
+    <div className="servicediv">
       <img src={imageSrc} alt={serviceName} className='imgprop'  />
       <h5 className="serviceNameBackground">{serviceName}</h5>
     </div>
@@ -10,7 +10,7 @@ const Service = ({ imageSrc, serviceName }) => (
   
 
 const ServicesList = () => {
-  const services = [
+  const srcontainer = [
     {
         imageSrc : 'https://img.freepik.com/premium-photo/speaker-business-conference-presentation_916191-61697.jpg?w=1060',
         serviceName : 'Wedding Planning'
@@ -73,15 +73,18 @@ const ServicesList = () => {
   ];
 
   return (
-    <div className="services">
-      {services.map((service, index) => (
-        <Service
+    <>
+    <div className='serviceblank'></div>
+    <div className="servicelist">
+      {srcontainer.map((service, index) => (
+        <Serviceprovider
           key={index}
           imageSrc={service.imageSrc}
           serviceName={service.serviceName}
         />
       ))}
     </div>
+    </>
   );
 };
 

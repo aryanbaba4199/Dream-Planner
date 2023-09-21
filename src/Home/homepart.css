@@ -2,7 +2,7 @@
 .homeblank{
   width: auto;
     height: 6rem;
-    display: none;
+    display: block;
 }
 .homeservices {
   display: grid;
