@@ -120,8 +120,8 @@ const WeddingBooking = () => {
     console.log("Booking Data:", bookingData);
 
     try {
-      // const response = await fetch("https://dpapi-omega.vercel.app/api/bookings", {
-        const response = await fetch("http://localhost:4000/api/bookings", {
+      const response = await fetch("https://dpapi-omega.vercel.app/api/bookings", {
+        // const response = await fetch("http://localhost:4000/api/bookings", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
