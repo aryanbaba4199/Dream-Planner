@@ -116,7 +116,7 @@ const WeddingBooking = () => {
   let showmsg = '';
   const handleBook = async () => {
     setBookingConfirmed(true);
-    let bookingTimestamp = new Date().toISOString();
+    let time = new Date().toISOString();
     const bookingData = {
       name,
       address,
@@ -124,7 +124,7 @@ const WeddingBooking = () => {
       selectedServices: services,
       msg,
       functionType,
-      bookingTimestamp,
+      time,
       
     };
     console.log("Booking Data:", bookingData);
