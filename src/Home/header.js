@@ -27,7 +27,6 @@ import AdminPanel from "../Admin/clientdata";
 function Tabmenu() {
 
   const handleDownloadClick = () => {
-    // Replace this URL with your app's download link
     window.location.href = "https://www.example.com/app-download";
   };
 
@@ -85,7 +84,7 @@ function Tabmenu() {
           </div>
 
           {/* Add other navigation links as needed */}
-          <div className="social">
+          <div className="socialcon">
             <img
               src="https://cdn-icons-png.flaticon.com/256/2111/2111463.png"
               width="25"

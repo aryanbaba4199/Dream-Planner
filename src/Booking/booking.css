@@ -142,10 +142,7 @@
     padding-right: 2rem;
     &:hover {
         box-shadow: 0 0 1.5625rem goldenrod; /* 25px / 16 */
-        width: 12.5rem; /* 200px / 16 */
-        height: 3.125rem;
-        display: flex;
-        justify-content: center;
+        
         cursor: pointer;
     }
 }

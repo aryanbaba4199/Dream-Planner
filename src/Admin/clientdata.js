@@ -10,7 +10,7 @@ function AdminPanel() {
   async function fetchDataAndUpdateState() {
     try {
       // const response = await fetch("http://localhost:4000/api/getdata");
-      const response = await fetch("https://dpapi-omega.verce.app/api/getdata");
+      const response = await fetch("https://dpapi-omega.vercel.app/api/getdata");
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }

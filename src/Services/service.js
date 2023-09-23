@@ -21,12 +21,16 @@ const ServicesList = () => {
         imageSrc : 'https://img.freepik.com/premium-photo/man-sits-desk-front-two-computer-screens-with-man-looking-screen-that-says-video-it_853677-20490.jpg?w=1380',
         serviceName : 'Video Editing'
      },
+     
     { imageSrc: 'https://img.freepik.com/free-photo/luxurious-dinner-hall-with-large-crystal-chandelier_8353-565.jpg?w=1060&t=st=1694591608~exp=1694592208~hmac=d1502c020641f4e38dc9a89ab225bfaa899c0c9ac967117dcc17174851b6d99d',
      serviceName: 'Wedding Decorators' },
 
     { imageSrc: 'https://img.freepik.com/free-photo/wedding-setting_1127-3211.jpg?w=1060&t=st=1694591711~exp=1694592311~hmac=2fb9caf2a9cd097f93895a520f454a752c842205b4640cf0495c9f400ee2312c'
     , serviceName: 'Wedding Venues' },
-
+    {
+      imageSrc : 'https://i.pinimg.com/564x/b9/8a/2d/b98a2de99f04a645dc0662c38a972daa.jpg',
+      serviceName : 'Sound Setup'
+    },
     { imageSrc: 'https://img.freepik.com/premium-photo/dj-night-dance-club-disco-musician-stage-party-mixing-music_234209-1670.jpg?w=1380',
      serviceName: 'DJs' },
 
@@ -51,7 +55,7 @@ const ServicesList = () => {
     },
     {
         imageSrc : 'https://img.freepik.com/free-photo/man-with-guitar-front-dark-background_1340-41516.jpg?t=st=1694592442~exp=1694596042~hmac=791f28ad3d2a0227f5f7f82e4ea0668cd091f6ebff4d62028526ac9c3a4d1d17&w=740',
-        serviceName : 'Artist Booking'
+        serviceName : 'Celebrity Management'
     },
     {
         imageSrc : 'https://img.freepik.com/premium-photo/people-group-catering-buffet-food-indoor-restaurant_916191-56937.jpg?w=1060',
@@ -68,7 +72,8 @@ const ServicesList = () => {
     {
         imageSrc : 'https://img.freepik.com/free-photo/couple-posing-photo-front-bridge_1340-41357.jpg?t=st=1694592787~exp=1694596387~hmac=896b0dd5fea50366908762e5eb5d7d9f68d7354cb87b9be296e756c3cb236a42&w=360',
         serviceName : 'Wedding Clothes'
-    }
+    },
+    
     // Add more services as needed
   ];
 

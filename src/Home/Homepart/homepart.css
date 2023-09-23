@@ -20,20 +20,22 @@
 }
 
 
-/**/
+/*Content with Glimpse*/
 .s1{
   display: flex;
   flex-wrap: wrap;
   color: white;
+  background-color: #333;
   width: 100%;
 }
 .s1-inside{
   width: 47rem;
   padding: 1rem;
   font-size: 2rem;
+  margin-top: 5rem;
   background-color: #333;
   
-} 
+}
 .s1-inside h2{
   box-shadow: 0.5rem 0.3rem black;
   display: flex ;
@@ -63,10 +65,19 @@
   width: 35rem;
   float: inline-end;
   height: 35rem;
-  margin-top: 10rem;
+  margin-top: 1rem;
   margin-left: 10rem;
   box-shadow: 0.4rem 0.2rem black;
 }
+
+
+
+
+
+
+
+
+
 
 .homeservices {
   order: 3;
@@ -181,6 +192,58 @@
   float: right;
 }
 
+.bottom {
+  color: white;
+  display: flex;
+  margin: 2rem;
+  justify-content: space-between; /* To evenly distribute child elements */
+}
+
+.contact {
+  align-items: center; /* To center content horizontally */
+}
+
+.location {
+  display: flex;
+  align-items: center; /* To center content horizontally */
+}
+
+.address-div {
+  text-align: center;
+  margin-left: 2rem;
+}
+
+.imgt {
+  width: 1.4rem;
+  margin-left: 0.5rem;
+  margin-top: 0.2rem;
+  height: 1.4rem;
+  float: right;
+  margin-right: 0.5rem;
+  &:hover{
+    cursor: pointer;
+  }
+}
+.social{
+  display: grid;
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+.in{
+  color: rgb(255, 157, 0);
+}
+.wt{
+  color: greenyellow;
+}
+.yt{
+  color: rgb(255, 32, 32);
+}
+.fb{
+  color: rgb(104, 104, 255);
+}
+
+
+
 
 
 
@@ -222,6 +285,28 @@
     border-radius: 1.25rem;
     /* 20px / 16px = 1.25rem */
   }
+  .s1-inside{
+    width: auto;
+    margin-top: 1rem;
+  }
+  .s1-inside h2{
+    width: 18rem;
+    height: 2.5rem;
+    text-align: end;
+  }
+  .s1-inside text{
+    display: none;
+  }
+  .s1-img{
+    width: auto;
+    margin-left: 0rem;
+  }
+  .s1-img img{
+    margin-left: 0rem;
+    width: 100%;
+    height: 30rem;
+    
+  }
 
   .adcontainer {
     order: 2;
@@ -256,5 +341,12 @@
     width: auto;
     height: 11rem;
     display: block;
+  }
+}
+
+@media (max-width : 480px){
+  .hsname{
+    display: none;
+    width: 5rem;
   }
 }

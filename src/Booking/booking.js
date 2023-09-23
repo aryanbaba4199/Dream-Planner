@@ -86,10 +86,20 @@ const WeddingBooking = () => {
       serviceName: "Wedding Clothes",
     },
 
-    // You can Select Deeply here
-
-    // Your service data here
+  
   ];
+
+  const handleInputClick = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        setAddress(`Latitude: ${latitude}, Longitude: ${longitude}`);
+      });
+    } else {
+      alert('Geolocation is not supported by your browser.');
+    }
+  };
 
   const handleFunctionTypeChange = (event) => {
     setSelectedFunctionType(event.target.value);
@@ -103,10 +113,10 @@ const WeddingBooking = () => {
       setServices(services.filter((service) => service !== serviceName));
     }
   };
-
+  let showmsg = '';
   const handleBook = async () => {
-    // Prepare the data to send to your backend
-    const bookingTimestamp = new Date().toISOString();
+    setBookingConfirmed(true);
+    let bookingTimestamp = new Date().toISOString();
     const bookingData = {
       name,
       address,
@@ -135,11 +145,11 @@ const WeddingBooking = () => {
         setBookingConfirmed(true);
         
       } else {
-        // Handle errors, e.g., display an error message to the user
-        console.error("Booking failed");
+        setBookingConfirmed(true);
       }
     } catch (error) {
       console.error("Error:", error);
+      console.log(error);
     }
   };
 
@@ -159,11 +169,13 @@ const WeddingBooking = () => {
             />
           </div>
           <div className="userdetail">
-            <label>City :</label>
+            <label>Location :</label>
             <input
               type="text"
               className="label"
               value={address}
+              placeholder="Get Location"
+              onClick={handleInputClick}
               onChange={(e) => setAddress(e.target.value)}
             />
           </div>
@@ -233,7 +245,7 @@ const WeddingBooking = () => {
             Book
             {bookingConfirmed && (
           <p className="cnfmsg">
-            Booking in process. Our planner will contact you soon.
+            Booking in process......<br/><br/> Our planner will contact you soon.
           </p>
         )}
           </h2>
