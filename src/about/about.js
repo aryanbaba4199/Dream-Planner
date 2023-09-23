@@ -1,6 +1,6 @@
 import React from "react";
 import TopicList from "./company";
-import Mission from "./mission"
+import AdminPanel from "../Admin/clientdata";
 import Aboutteam from "./team"
 
 function About(){
@@ -8,7 +8,6 @@ function About(){
         <>
         <TopicList/>
         <Aboutteam/>
-        <Mission/>
         </>
     );
 }

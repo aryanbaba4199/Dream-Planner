@@ -1,0 +1,12 @@
+.feedback-form{
+    background-color: black;
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+.btnfbsubmit{
+    width: 5rem;
+    height: 2rem;
+    color: red
+    background-color: black;
+}

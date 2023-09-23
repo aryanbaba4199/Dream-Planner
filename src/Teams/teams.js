@@ -52,6 +52,11 @@ const Teams = () => {
       Name: 'Vikash Chauhan',
       Designatation: 'Digital Head'
     },
+    {
+      imageSrc : 'https://scontent.fdbd4-1.fna.fbcdn.net/v/t1.6435-9/94312918_1093292124373443_3777703609785909248_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=174925&_nc_ohc=wfdhYt8DQREAX-1W2w4&_nc_ht=scontent.fdbd4-1.fna&oh=00_AfASwhcKXMj7x8FHfsBOZkykq69TvF1tlaDHphRRIQ41RQ&oe=6534EE92',
+      Name : "Neeraj Dubey",
+      Designatation : "Editing Head"
+    }
 
     
     // Add more services as needed

@@ -1,13 +1,14 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import './header.css'
+import '../Home/Homepart/homepart.css'
 import WeddingBooking from "../Booking/booking";
 import Logoa from '../assets/logo.gif'
 import ServicesList from "../Services/service";
-import Homepart from './homepart'
+import Homepart from './Homepart/homepart'
 import Teams from "../Teams/teams";
 import About from "../about/about";
 import Career from "../career/career"
+import FeedbackForm from "../Admin/feedback";
 
 
 
@@ -16,6 +17,8 @@ import Career from "../career/career"
 import Nav from "react-bootstrap/Nav";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AdminPanel from "../Admin/clientdata";
+
 
 
 // Social Netwoek handling
@@ -124,6 +127,8 @@ function Tabmenu() {
           <Route path="/teams" element={<Teams />} />
           <Route path="/about" element={<About/>}/>
           <Route path= "/career" element = {<Career/>}/>
+          <Route path="/feedback" element = {<FeedbackForm/>}/>
+          <Route path="/admin" element = {<AdminPanel/>}/>
 
         </Routes>
 

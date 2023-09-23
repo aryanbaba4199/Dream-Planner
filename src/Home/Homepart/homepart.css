@@ -1,0 +1,260 @@
+@font-face {
+  font-family: myfont;
+  src: url(../../../public/myfont.ttf);
+}
+#root{
+  overflow-x: hidden;
+}
+.homeblank {
+  width: auto;
+  height: 7rem;
+  display: block;
+}
+
+.wholecontainer {
+  background-image: url(../../assets/bg.jpg);
+  width: 100%;
+  height: 100%;
+  margin-top: 1rem;
+  /* 130px / 16px = 8.125rem */
+}
+
+
+/**/
+.s1{
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  width: 100%;
+}
+.s1-inside{
+  width: 47rem;
+  padding: 1rem;
+  font-size: 2rem;
+  background-color: #333;
+  
+} 
+.s1-inside h2{
+  box-shadow: 0.5rem 0.3rem black;
+  display: flex ;
+  justify-content: center;
+  height: 3rem;
+  border-radius: 2rem;
+  text-shadow: 0.3rem 0.3rem 1rem rgb(255, 153, 0);
+}
+.s1-inside text{
+  font-size: 1.2rem;
+  font-family : Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  text-shadow:0.1rem 0.1rem 01rem rgb(0, 0, 0);
+
+  
+}
+
+.s1-img{
+  float: inline-end;
+  background-color: #333;
+  width: 47.5rem;
+  
+}
+.s1-img img{
+  border-radius: 3rem;
+  border: 0.2rem solid black;
+  width: 35rem;
+  float: inline-end;
+  height: 35rem;
+  margin-top: 10rem;
+  margin-left: 10rem;
+  box-shadow: 0.4rem 0.2rem black;
+}
+
+.homeservices {
+  order: 3;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem;
+  width: 100%;
+  /* 300px / 16px = 18.75rem */
+}
+
+.hsname {
+  background-color: #333;
+  box-shadow: 0.4rem 0.4rem 0.2rem black;
+  margin: 0.3125rem;
+  /* 5px / 16px = 0.3125rem */
+  color: white;
+  font-size: 1.125rem;
+  /* 18px / 16px = 1.125rem */
+  text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5);
+  /* 10px / 16px = 0.625rem */
+  padding: 0.3125rem;
+  font-size: 1.25rem;
+  width: 18rem;
+  flex: auto;
+  height: 3rem;
+  border-radius: 1.25rem;
+}
+
+.hsname:hover {
+  box-shadow: 0 0 1.25rem rgb(255, 117, 37);
+  /* 20px / 16px = 1.25rem */
+  padding: 0.625rem;
+  /* 10px / 16px = 0.625rem */
+}
+
+.serve {
+  display: flex;
+  color: white;
+  justify-content: center;
+  border-radius: 1.25rem;
+  /* 20px / 16px = 1.25rem */
+  margin-top: 1.25rem;
+  /* 20px / 16px = 1.25rem */
+  margin-bottom: 1.25rem;
+  /* 20px / 16px = 1.25rem */
+  background: linear-gradient(rgb(255, 136, 0), rgb(46, 100, 199));
+}
+
+/* .slider-container */
+.slider-container {
+  order: 1;
+  overflow: hidden;
+  position: relative;
+  width: 44rem;
+  height: 31rem;
+  margin: 1.25rem;
+  /* 20px / 16px = 1.25rem */
+  margin-left: 3.125rem;
+  /* 50px / 16px = 3.125rem */
+  margin-right: 3.125rem;
+  /* 50px / 16px = 3.125rem */
+  border-radius: 1.25rem;
+  /* 20px / 16px = 1.25rem */
+}
+
+.slidepic {
+  width: auto;
+  height: 31.25rem;
+}
+
+.slider {
+  display: flex;
+  transition: transform 1.5s ease-in-out;
+}
+
+.slidead {
+  flex: 0 0 18.75rem;
+  /* 300px / 16px = 18.75rem */
+  height: 18.75rem;
+  /* 300px / 16px = 18.75rem */
+}
+
+
+
+.adcontainer {
+  order: 2;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 18.75rem;
+  /* 300px / 16px = 18.75rem */
+  height: auto;
+  margin: 1.25rem;
+  /* 20px / 16px = 1.25rem */
+  border-radius: 1.25rem;
+  /* 20px / 16px = 1.25rem */
+}
+
+.videoad {
+
+  margin-top: 3.125rem;
+  /* 50px / 16px = 3.125rem */
+}
+
+.tp1 {
+  background-image: url(../../assets/bg.jpg);
+  box-shadow: 1rem 1rem black;
+}
+
+.ad2 {
+  float: right;
+}
+
+
+
+
+
+
+
+/* Media Query for max-width: 890px */
+@media (max-width: 768px) {
+  #root {
+    overflow-x: hidden;
+  }
+
+  .wholecontainer {
+    display: flex;
+    overflow-x: hidden;
+    width: 100%;
+
+    background-color: #333;
+
+    flex-direction: column;
+  }
+
+  .homeservices {
+    order: 3;
+    justify-content: center;
+    padding: 0.625rem;
+    /* 10px / 16px = 0.625rem */
+  }
+
+  .slider-container {
+    order: 1;
+    width: auto;
+    height: auto;
+    overflow: unset;
+    margin-top: 6.875rem;
+    /* 110px / 16px = 6.875rem */
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 1.25rem;
+    /* 20px / 16px = 1.25rem */
+  }
+
+  .adcontainer {
+    order: 2;
+  }
+
+  .slide {
+    width: auto;
+    /* 300px / 16px = 18.75rem */
+  }
+
+  .hsname {
+    width: 12rem;
+    /* 250px / 16px = 15.625rem */
+    align-items: center;
+    font-size: 1rem;
+    padding: 0.1rem;
+
+    &:hover {
+      background-color: goldenrod;
+    }
+
+  }
+
+  .slidepic {
+    width: 33rem;
+    /* 300px / 16px = 18.75rem */
+    height: 22rem;
+    /* 300px / 16px = 18.75rem */
+  }
+
+  .homeblank {
+    width: auto;
+    height: 11rem;
+    display: block;
+  }
+}

@@ -52,22 +52,24 @@
   display: flex;
   padding: 0.625rem 1.25rem; /* 10px / 16px = 0.625rem and 20px / 16px = 1.25rem */
   margin-left: 0.3125rem; /* 5px / 16px = 0.3125rem */
-  background-color: black;
+  background-color: rgb(40, 40, 40);
   color: rgb(244, 244, 244);
   cursor: pointer;
-  border: 0.125rem solid goldenrod; /* 2px / 16px = 0.125rem */
+  border: 0.1rem solid black; /* 2px / 16px = 0.125rem */
   border-radius: 0.625rem; 
+  box-shadow: 0.2rem 0.1rem black;
   align-items: center;
   height: auto;
+  margin-top: 0.5rem;
 }
 
 .bio:hover {
   background-color: black;
   color: rgb(251, 251, 251);
   font-style: italic;
-  box-shadow: 1.25rem 1.25rem 1.25rem rgb(195, 101, 7); /* 20px / 16px = 1.25rem */
-  width: auto; /* 120px / 16px = 7.5rem */
-  height: 3.125rem; /* 50px / 16px = 3.125rem */
+  box-shadow: 0.0rem 0.0rem 1.0rem rgb(195, 101, 7); /* 20px / 16px = 1.25rem */
+  width: 5.0rem; /* 120px / 16px = 7.5rem */
+  height: 2.5rem; /* 50px / 16px = 3.125rem */
 }
 
 .social-iconin {
@@ -123,12 +125,16 @@
     
   }
   .bio{
-    width: 6rem;
-    height: 2.5rem;
+    width: 4.5rem;
+    height: 2.0rem;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 0rem;
   }
   .sitenamecontainer {
     margin-left: 3rem;
     font-weight: bold;
+
     margin-bottom: 0rem;
     text-transform: uppercase; /* Optional: Uppercase text */
   }

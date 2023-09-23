@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./booking.css";
-import userEvent from "@testing-library/user-event";
+
+
+
+
 
 const WeddingBooking = () => {
   const [name, setName] = useState("");
@@ -10,6 +13,8 @@ const WeddingBooking = () => {
   const [bookingConfirmed, setBookingConfirmed] = useState(false);
   const [selectedFunctionType, setSelectedFunctionType] = useState("");
   const [msg , setmsg] = useState("");
+  
+  
 
   const functionType = [
     {
@@ -101,21 +106,22 @@ const WeddingBooking = () => {
 
   const handleBook = async () => {
     // Prepare the data to send to your backend
+    const bookingTimestamp = new Date().toISOString();
     const bookingData = {
       name,
       address,
       mobile,
       selectedServices: services,
       msg,
-      selectedFunctionType: functionType.find((fn) =>
-        services.includes(fn.fntype)
-      ),
+      functionType,
+      bookingTimestamp,
       
     };
     console.log("Booking Data:", bookingData);
 
     try {
-      const response = await fetch("https://dpapi-omega.vercel.app/api/bookings", {
+      // const response = await fetch("https://dpapi-omega.vercel.app/api/bookings", {
+        const response = await fetch("http://localhost:4000/api/bookings", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -127,6 +133,7 @@ const WeddingBooking = () => {
         console.log("Success");
         // Booking successful, you can set a state variable or show a confirmation message
         setBookingConfirmed(true);
+        
       } else {
         // Handle errors, e.g., display an error message to the user
         console.error("Booking failed");
@@ -224,13 +231,14 @@ const WeddingBooking = () => {
         <div className="bookbtn">
           <h2 onClick={handleBook} className="bookbtnin">
             Book
-          </h2>
-        </div>
-        {bookingConfirmed && (
+            {bookingConfirmed && (
           <p className="cnfmsg">
             Booking in process. Our planner will contact you soon.
           </p>
         )}
+          </h2>
+        </div>
+        
       </div>
     </>
   );
