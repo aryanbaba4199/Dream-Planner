@@ -310,10 +310,33 @@
     background-color: #333;
     flex-direction: column;
   }
+  .fs-inside{
+    display: grid;
+    width: fit-content;
+  }
+  .fsname-container{
+    margin-left: 1.5rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+  }
+  .fsheading{
+    width: 19rem;
+  }
+  .fsimg{
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+  }
+  .dream{
+    font-size: 3rem;
+  }
+  .fsimg{
+    font-size: 0.7rem;
+    margin-left: 0rem;
+  }
 
   .homeservices {
-    order: 3;
-    justify-content: center;
     padding: 0.625rem;
   }
 
@@ -340,12 +363,8 @@
   }
 
   .s1-inside p {
-    font-size: 1.2rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    text-shadow: 0.1rem 0.1rem 0.1rem rgb(0, 0, 0);
-    line-height: 1.5; /* Adjust line height for better readability */
-    margin-top: 1rem; /* Add margin for separation */
+    display: none;
+    
   }
   .s1-img {
     width: auto;
@@ -395,8 +414,6 @@
 }
 
 @media (max-width: 480px) {
-  .hsname {
-    display: none;
-    width: 5rem;
-  }
+  
+  
 }

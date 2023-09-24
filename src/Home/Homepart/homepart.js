@@ -54,6 +54,24 @@ const ImageSlider = () => {
               </div>
 
           </div>
+          <div className="service-container">
+        <h2 className="serve">Our Services</h2>
+        <div className="homeservices"></div>
+        <button className="hsname">Photographer</button>
+        <button className="hsname">Decorators</button>
+        <button className="hsname">Wedding Venues</button>
+        <button className="hsname">DJs</button>
+        <button className="hsname">Wedding Cars</button>
+        <button className="hsname">Bridal Makeup </button>
+        <button className="hsname">Mehndi Artist</button>
+        <button className="hsname">Invitation Card</button>
+        <button className="hsname">Choreographers</button>
+        <button className="hsname">Artist Booking</button>
+        <button className="hsname">Catering Service</button>
+        <button className="hsname">Dancers</button>
+        <button className="hsname">Honeymoon</button>
+        <button className="hsname">Wedding Clothes</button>
+      </div>
         </div>
       </div>
       <div className="s1">
@@ -139,25 +157,8 @@ const ImageSlider = () => {
         </div>
       </div>
 
-      <div className="service-container">
-        <h2 className="serve">Our Services</h2>
-        <div className="homeservices"></div>
-        <button className="hsname">Photographer</button>
-        <button className="hsname">Decorators</button>
-        <button className="hsname">Wedding Venues</button>
-        <button className="hsname">DJs</button>
-        <button className="hsname">Wedding Cars</button>
-        <button className="hsname">Bridal Makeup </button>
-        <button className="hsname">Mehndi Artist</button>
-        <button className="hsname">Invitation Card</button>
-        <button className="hsname">Choreographers</button>
-        <button className="hsname">Artist Booking</button>
-        <button className="hsname">Catering Service</button>
-        <button className="hsname">Dancers</button>
-        <button className="hsname">Honeymoon</button>
-        <button className="hsname">Wedding Clothes</button>
-      </div>
-      <h2 className="bottom">Contact us</h2>
+      
+      <h2 className="serve">Contact us</h2>
       <div className="bottom">
         <div className="contact">
           <div className="location">

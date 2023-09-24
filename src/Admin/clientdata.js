@@ -6,7 +6,7 @@ function AdminPanel() {
   const [userCount, setUserCount] = useState(0);
   const [lastUpdated, setLastUpdated] = useState('');
 
-  // Function to fetch data and update state
+  
   async function fetchDataAndUpdateState() {
     try {
       // const response = await fetch("http://localhost:4000/api/getdata");
@@ -27,6 +27,26 @@ function AdminPanel() {
       console.error("Error fetching data:", error);
     }
   }
+
+  // Delete Button
+  async function deletedata(itemId) {
+    try {
+      const response = await fetch(`https://dpapi.vercel.app/api/delete/${itemId}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      fetchDataAndUpdateState();
+    } catch (error) {
+      console.error('Error deleting data:', error);
+    }
+  }
+  
 
   useEffect(() => {
     fetchDataAndUpdateState(); // Initial fetch
@@ -56,8 +76,34 @@ function AdminPanel() {
             <h6>Services: {item.selectedServices.join(", ")}</h6>
             <h6>Message : {item.msg}</h6>
             <h6>Time : {item.time}</h6>
+            <div className="crud">
+              <img
+                src="https://cdn-icons-png.flaticon.com/256/9790/9790368.png"
+                alt="Delete"
+                width='30'
+                height='30'
+                onClick={()=> deletedata(item._id)}
+              />
+              {/* <img
+                src=""
+                alt="Delete"
+                width='30'
+                height='30'
+                onClick={deletedata}
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/256/9790/9790368.png"
+                alt="Delete"
+                width='30'
+                height='30'
+                onClick={deletedata}
+              /> */}
+
+            </div>
           </div>
+          
         ))}
+        
       </div>
     </div>
     </>
