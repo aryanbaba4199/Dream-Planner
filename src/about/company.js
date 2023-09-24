@@ -1,8 +1,6 @@
 import React from "react";
 import "../about/aboutcss/company.css";
 import Nav from "react-bootstrap/Nav";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import FeedbackForm from "../Admin/feedback";
 
 const Companytopic = ({ topic, topicDetail }) => (
   <div className="topicdiv">

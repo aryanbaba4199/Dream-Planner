@@ -1,20 +1,10 @@
-import "./homepart.css";
-import Imagecarousal from "./slider";
-import Slideone from "../../images/slideone.JPG";
-
-// src/ImageSlider.js
 import React, { useState, useEffect } from "react";
-import Tp1img from "../../assets/tp1.png";
-
-const adimage = [
-  "https://lh3.googleusercontent.com/p/AF1QipMgcdlKliUXcMwUhdSq-0WemWSCRFJQ8UZ3PMvc=s1360-w1360-h1020",
-  "https://scontent.fpat4-1.fna.fbcdn.net/v/t39.30808-6/379652536_748371607302077_6726923290752939426_n.jpg?stp=cp6_dst-jpg&_nc_cat=111&ccb=1-7&_nc_sid=52f669&_nc_ohc=V7hmTjcJ-FUAX81KKS_&_nc_ht=scontent.fpat4-1.fna&oh=00_AfAnxCYohWx_SmbwKa2_uCjWEEj4hJsXl2Iumje49605Sw&oe=6509D9F4",
-];
-
+import "./homepart.css";
 const images = [
-  "https://github.com/aryanbaba4199/images/blob/main/DSC_2902.JPG?raw=true",
-  "https://github.com/aryanbaba4199/images/blob/main/DSC_3376.JPG?raw=true",
-  "https://github.com/aryanbaba4199/images/blob/main/New%20Ideas%20for%20Mandap%20D%C3%A9cor%20at%20Your%20Wedding%20-%20VenueLook%20Blog.jpg?raw=true",
+  "https://i.pinimg.com/750x/99/64/51/99645143b39bce2cbbe115ca40c04fd8.jpg",
+  "https://i.pinimg.com/564x/df/6d/02/df6d02e6e21d6bad6afbc922a739f961.jpg",
+  "https://i.pinimg.com/564x/e2/1d/d8/e21dd8c143905300ee1a822dc2bc54b1.jpg",
+  "https://i.pinimg.com/564x/ab/ae/46/abae4649b91a1671f8017e72c2eb00bd.jpg",
 ];
 
 const Instapage = () => {
@@ -36,7 +26,7 @@ const ImageSlider = () => {
   useEffect(() => {
     const sliderInterval = setInterval(() => {
       setCurrentImage((prevImage) =>
-        prevImage === images.length - 2 ? 0 : prevImage + 1
+        prevImage === images.length - 1 ? 0 : prevImage + 1
       );
     }, 3000); // Adjust the interval as needed
 
@@ -59,7 +49,7 @@ const ImageSlider = () => {
             <div className="slide" key={index}>
               <img
                 src={image}
-                alt={`Image ${index + 1}`}
+                alt='image'
                 className="slidepic"
               />
             </div>
@@ -79,7 +69,8 @@ const ImageSlider = () => {
         <div className="s1-img">
           <img
             className="s1-imgprop"
-            src="https://github.com/aryanbaba4199/images/blob/main/img1.jpg?raw=true"
+            src="https://i.pinimg.com/564x/df/6d/02/df6d02e6e21d6bad6afbc922a739f961.jpg"
+            alt="Mandap Theme"
           />
         </div>
       </div>
@@ -101,6 +92,7 @@ const ImageSlider = () => {
           <img
             className="s1-imgprop"
             src="https://image.wedmegood.com/resized/800X/uploads/member/3265474/1660804521_image875.jpg"
+            alt="Floral Decoration"
           />
         </div>
 
@@ -121,6 +113,7 @@ const ImageSlider = () => {
           <img
             className="s1-imgprop"
             src="https://image.wedmegood.com/resized/800X/uploads/member/3265474/1694080343_image9150.jpg"
+            alt="Theme Entry"
           />
         </div>
       </div>
@@ -141,6 +134,7 @@ const ImageSlider = () => {
           <img
             className="s1-imgprop"
             src="https://image.wedmegood.com/resized/800X/uploads/member/628710/1635741337_BY4B5735.JPG"
+            alt="Dance Troupe & DJ's"
           />
         </div>
       </div>
@@ -170,10 +164,10 @@ const ImageSlider = () => {
             <img
               className="imgt"
               src="https://cdn-icons-png.flaticon.com/256/535/535137.png"
+              alt="Location"
               width="20"
               height="30"
             />
-
             <h3>Address</h3>
           </div>
           <div className="address-div">
@@ -190,6 +184,7 @@ const ImageSlider = () => {
               src="https://cdn-icons-png.flaticon.com/256/2111/2111463.png"
               onClick={Instapage}
               className="imgt"
+              alt="Instagram"
               />
             </div>
             <div className="wt">
@@ -197,6 +192,7 @@ const ImageSlider = () => {
               <img src="https://cdn-icons-png.flaticon.com/256/3992/3992601.png"
               className="imgt"
               onClick={Whatsapp}
+              alt="Whatsapp"
               />
             </div>
             <div class="yt">
@@ -204,6 +200,7 @@ const ImageSlider = () => {
               <img src="https://cdn-icons-png.flaticon.com/256/174/174883.png"
                 className="imgt"
                 onClick={Ytpage}
+                alt="Youtube"
               />
             </div>
             <div class="fb" >
@@ -211,8 +208,8 @@ const ImageSlider = () => {
               <img src="https://cdn-icons-png.flaticon.com/256/2504/2504903.png"
               className="imgt"
               onClick={Fbpage}
+              alt="Facebook"
               />
-               
             </div>
           </div>
         </div>
@@ -224,6 +221,7 @@ const ImageSlider = () => {
             src="https://media.licdn.com/dms/image/C4D16AQHz_u7EBZvUoA/profile-displaybackgroundimage-shrink_350_1400/0/1593088031766?e=1700697600&v=beta&t=QyX-KXFlsYOy0qCZXkkRpekwVKGiBMfNiEg8QHZc-P8"
             width='300rem'
             height='150rem'
+            alt="Channel Partner"
             />
           </div>
         </div>

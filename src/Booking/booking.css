@@ -1,21 +1,20 @@
 .wholepage {
-     /* 140px / 16 */
+    margin-top: 4rem;
+    flex-direction: row;
+    width: auto;
 }
-.blank{
+
+.blank {
     width: auto;
     height: 6.5rem;
     display: block;
 }
 
-
 .bookingcontainer {
     color: white;
-    
 }
 
 .servic {
-   
-    
     justify-content: space-between;
     border-radius: 10px;
 }
@@ -31,43 +30,41 @@
     border-radius: 1.25rem;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
 }
-
 
 .service img {
     max-width: 100%;
-    height: 9.375rem; /* 150px / 16 */
-    width: 21.25rem; /* 340px / 16 */
-    border-radius: 0.625rem; /* 10px / 16 */
+    height: 9.375rem;
+    width: 21.25rem;
+    border-radius: 0.625rem;
 }
 
 .service h5 {
-    margin-top: 0.625rem; /* 10px / 16 */
-    font-size: 1rem; /* 16px / 16 */
+    margin-top: 0.625rem;
+    font-size: 1rem;
 }
 
 .userdiv {
     display: flex;
     color: white;
-    margin-top: 1.125rem; /* 50px / 16 */
-    margin-left: 1.875rem; /* 30px / 16 */
-   
+    margin-top: 1.125rem;
+    margin-left: 1.875rem;
 }
 
 .usercontainer {
     display: flex;
     color: white;
     justify-content: center;
-    padding: 1.25rem; 
+    padding: 1.25rem;
 }
 
 .userdetail {
-    margin-right: 3.125rem; /* 50px / 16 */
+    margin-right: 3.125rem;
     font-weight: bold;
     text-shadow: 0.3rem 0.3rem 1rem rgba(255, 2, 2, 0.5);
-    letter-spacing: 0.2rem; 
-    background-color: rgba(0, 0, 0, 0.2); 
+    letter-spacing: 0.2rem;
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 1rem;
     justify-content: center;
     border-radius: 10px;
@@ -75,49 +72,50 @@
 }
 
 .label {
-    margin-left: 0.625rem; /* 10px / 16 */
-    border-radius: 0.625rem; /* 10px / 16 */
+    margin-left: 0.625rem;
+    border-radius: 0.625rem;
     &:hover {
-        box-shadow: 0 0 1.25rem rgb(240, 136, 24); /* 20px / 16 */
+        box-shadow: 0 0 1.25rem rgb(240, 136, 24);
     }
     &:focus {
-        box-shadow: 0 0 1.5625rem rgb(146, 0, 0); /* 25px / 16 */
-        width: 13.75rem; /* 220px / 16 */
-        height: 2.5rem; /* 40px / 16 */
+        box-shadow: 0 0 1.5625rem rgb(146, 0, 0);
+        width: 13.75rem;
+        height: 2.5rem;
     }
 }
 
-/* Check Box */
 .checktitle {
-    width: 1.25rem; /* 20px / 16 */
-    height: 1.25rem; /* 20px / 16 */
-    margin-right: 0.625rem; /* 10px / 16 */
-    margin-top: 0.125rem; /* 2px / 16 */
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.625rem;
+    margin-top: 0.125rem;
 }
 
 .checkbox {
-    margin: 0.625rem; /* 10px / 16 */
+    margin: 0.625rem;
     display: flex;
     justify-content: left;
     width: 20rem;
-    font-size: 1.125rem; /* 18px / 16 */
+    font-size: 1.125rem;
     box-shadow: 0.5rem 0.5rem, 1rem, rgba(255, 166, 2, 0.2);
     text-shadow: 0.3rem 0.3rem 1rem rgba(255, 2, 2, 0.5);
 }
 
-.msg-holder{
+.msg-holder {
     display: flex;
     justify-content: center;
     color: white;
     padding: 2rem;
 }
-.msgtitle{
+
+.msgtitle {
     display: flex;
-    font-size: 1.125rem; /* 18px / 16 */
+    font-size: 1.125rem;
     box-shadow: 0.5rem 0.5rem, 1rem, rgba(255, 166, 2, 0.2);
     text-shadow: 0.3rem 0.3rem 1rem rgba(255, 2, 2, 0.5);
 }
-.msgbox{
+
+.msgbox {
     margin-top: 1rem;
 }
 
@@ -130,37 +128,32 @@
 }
 
 .bookbtnin {
-    
-     /* 150px / 16 */
-    color: white; /* Change text color to white */
-    border-radius: 0.5rem; /* 20px / 16 */
-    font-size: 1.5625rem; /* 25px / 16 */
-    margin-bottom: 3.125rem; /* 50px / 16 */
+    color: white;
+    border-radius: 0.5rem;
+    font-size: 1.5625rem;
+    margin-bottom: 3.125rem;
     background-color: black;
     padding: 0.5rem;
     padding-left: 2rem;
     padding-right: 2rem;
     &:hover {
-        box-shadow: 0 0 1.5625rem goldenrod; /* 25px / 16 */
-        
+        box-shadow: 0 0 1.5625rem goldenrod;
         cursor: pointer;
     }
 }
 
-
 .cnfmsg {
-    margin: 1.25rem; /* 20px / 16 */
+    margin: 1.25rem;
     align-items: center;
     justify-content: center;
-    margin-left: 34.375rem; /* 550px / 16 */
-    margin-bottom: 3.125rem; /* 50px / 16 */
-    font-size: 1.25rem; /* 20px / 16 */
+    margin-left: 34.375rem;
+    margin-bottom: 3.125rem;
+    font-size: 1.25rem;
 }
 
-
-@media (max-width: 55.625rem) { /* 890px / 16 */
+@media (max-width: 55.625rem) {
     .wholepage {
-        margin-top: 4rem; /* 140px / 16 */
+        margin-top: 4rem;
         flex-direction: row;
         width: auto;
     }
@@ -173,8 +166,7 @@
         justify-content: center;
         padding: 0.2rem;
     }
-    .blank{
+    .blank {
         display: block;
     }
-    
 }

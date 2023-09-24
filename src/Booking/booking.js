@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import "./booking.css";
 
-
-
-
-
 const WeddingBooking = () => {
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
@@ -13,8 +9,6 @@ const WeddingBooking = () => {
   const [bookingConfirmed, setBookingConfirmed] = useState(false);
   const [selectedFunctionType, setSelectedFunctionType] = useState("");
   const [msg , setmsg] = useState("");
-  
-  
 
   const functionType = [
     {
@@ -36,6 +30,7 @@ const WeddingBooking = () => {
       fntype: "Birthday Celebration",
     },
   ];
+
   const availableServices = [
     {
       serviceName: "Event Planning",
@@ -85,8 +80,6 @@ const WeddingBooking = () => {
     {
       serviceName: "Wedding Clothes",
     },
-
-  
   ];
 
   const handleInputClick = () => {
@@ -113,7 +106,7 @@ const WeddingBooking = () => {
       setServices(services.filter((service) => service !== serviceName));
     }
   };
-  let showmsg = '';
+
   const handleBook = async () => {
     setBookingConfirmed(true);
     let time = new Date().toISOString();
@@ -125,13 +118,11 @@ const WeddingBooking = () => {
       msg,
       functionType,
       time,
-      
     };
-    console.log("Booking Data:", bookingData);
 
     try {
       const response = await fetch("https://dpapi-omega.vercel.app/api/bookings", {
-        // const response = await fetch("http://localhost:4000/api/bookings", {
+        // const response = await fetch("http://localhost:4000/api/bookings")
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -141,9 +132,7 @@ const WeddingBooking = () => {
 
       if (response.ok) {
         console.log("Success");
-        // Booking successful, you can set a state variable or show a confirmation message
         setBookingConfirmed(true);
-        
       } else {
         setBookingConfirmed(true);
       }
@@ -234,9 +223,7 @@ const WeddingBooking = () => {
         <div className="msg-holder">
           <label className="msgtitle">
             Explain Your Function
-            <input type="text" value={msg} className="msgbox" onChange={(e)=>setmsg(e.target.value)} >
-            </input>
-
+            <input type="text" value={msg} className="msgbox" onChange={(e)=>setmsg(e.target.value)} />
           </label>
         </div>
 
@@ -244,13 +231,12 @@ const WeddingBooking = () => {
           <h2 onClick={handleBook} className="bookbtnin">
             Book
             {bookingConfirmed && (
-          <p className="cnfmsg">
-            Booking in process......<br/><br/> Our planner will contact you soon.
-          </p>
-        )}
+              <p className="cnfmsg">
+                Booking in process......<br/><br/> Our planner will contact you soon.
+              </p>
+            )}
           </h2>
         </div>
-        
       </div>
     </>
   );

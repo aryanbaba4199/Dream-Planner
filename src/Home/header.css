@@ -1,4 +1,3 @@
-
 .wholeheader {
   display: flex;
   z-index: 100;
@@ -10,15 +9,13 @@
   background-color: #333;
 }
 
-
 .tab {
-
   display: flex;
   align-items: flex-start;
-  width: auto; /* 500px / 16px = 31.25rem */
-  background-color: #333; /* Change this to your desired background color */
-  color: #fff; /* Change this to your desired text color */
-  padding: 0.625rem 0; /* 10px / 16px = 0.625rem */
+  width: auto;
+  background-color: #333;
+  color: #fff;
+  padding: 0.625rem 0;
 }
 
 .logo-holder {
@@ -30,33 +27,34 @@
 .imglogo {
   border-radius: 50%;
 }
+
 .sitenamecontainer {
   margin-left: 0.5rem;
   font-weight: bold;
-  text-transform: uppercase; /* Optional: Uppercase text */
-  font-size: 2.25rem; /* 36px / 16px = 2.25rem */
+  text-transform: uppercase;
+  font-size: 2.25rem;
 }
+
 .snc {
   display: flex;
 }
 
-.part2{
-  margin-left: 1rem; /* 10px / 16px = 0.625rem */
+.part2 {
+  margin-left: 1rem;
   display: flex;
   height: 2.5rem;
   margin-top: 0.5rem;
-  
 }
 
 .bio {
   display: flex;
-  padding: 0.625rem 1.25rem; /* 10px / 16px = 0.625rem and 20px / 16px = 1.25rem */
-  margin-left: 0.3125rem; /* 5px / 16px = 0.3125rem */
+  padding: 0.625rem 1.25rem;
+  margin-left: 0.3125rem;
   background-color: rgb(40, 40, 40);
   color: rgb(244, 244, 244);
   cursor: pointer;
-  border: 0.1rem solid black; /* 2px / 16px = 0.125rem */
-  border-radius: 0.625rem; 
+  border: 0.1rem solid black;
+  border-radius: 0.625rem;
   box-shadow: 0.2rem 0.1rem black;
   align-items: center;
   height: auto;
@@ -67,65 +65,48 @@
   background-color: black;
   color: rgb(251, 251, 251);
   font-style: italic;
-  box-shadow: 0.0rem 0.0rem 1.0rem rgb(195, 101, 7); /* 20px / 16px = 1.25rem */
-  width: 5.0rem; /* 120px / 16px = 7.5rem */
-  height: 2.5rem; /* 50px / 16px = 3.125rem */
+  box-shadow: 0.0rem 0.0rem 1.0rem rgb(195, 101, 7);
+  width: 5.0rem;
+  height: 2.5rem;
 }
-
-.social-iconin {
-  
-  margin: 0.625rem; /* 10px / 16px = 0.625rem */
-  margin-left: 1.25rem; /* 20px / 16px = 1.25rem */
-}
-
-.social-icon {
-  margin: 0.625rem; /* 10px / 16px = 0.625rem */
-}
-
-
-
 .sitename {
-
   color: rgb(255, 118, 39);
-  text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5); /* 10px / 16px = 0.625rem */
-  transform: perspective(62.5rem) rotateY(0.625deg); /* 1000px / 16px = 62.5rem */
+  text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5);
+  transform: perspective(62.5rem) rotateY(0.625deg);
 }
 
 .sitename1 {
   color: rgb(77, 169, 255);
-  text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5); /* 10px / 16px = 0.625rem */
-  margin-left: 1.25rem; /* 20px / 16px = 1.25rem */
-  transform: perspective(62.5rem) rotateY(0.625deg); /* 1000px / 16px = 62.5rem */
+  text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5);
+  margin-left: 1.25rem;
+  transform: perspective(62.5rem) rotateY(0.625deg);
 }
 
 .slogan {
-  font-size: 1rem; /* 16px / 16px = 1rem */
+  font-size: 1rem;
   color: rgb(32, 196, 255);
   font-size: 1rem;
 }
 
-/* for Responsiveness */
-@media (max-width: 768px) { /* 890px / 16px = 55.625rem */
+@media (max-width: 768px) {
   .wholeheader {
     display: flex;
     width: auto;
     margin-top: -1rem;
-    height : 12rem;
+    height: 12rem;
     top: 0;
-    flex-direction: column; /* Display items in a column */
+    flex-direction: column;
   }
   .part2 {
     display: flex;
     font-size: 1rem;
-    
     margin: 0.2rem;
-    max-height: none; /* Remove the maximum height for larger screens */
-    height: 2.5rem; /* Set the desired height for PC view */
+    max-height: none;
+    height: 2.5rem;
     overflow: visible;
     flex-wrap: wrap;
-    
   }
-  .bio{
+  .bio {
     width: 4.5rem;
     height: 2.0rem;
     justify-content: center;
@@ -135,44 +116,35 @@
   .sitenamecontainer {
     margin-left: 3rem;
     font-weight: bold;
-
     margin-bottom: 0rem;
-    text-transform: uppercase; /* Optional: Uppercase text */
+    text-transform: uppercase;
   }
   .sitename {
-    font-size: 1.25rem; /* 20px / 16px = 1.25rem */
-
+    font-size: 1.25rem;
     margin-right: -3.125rem;
-    margin-top : 1rem; /* 50px / 16px = 3.125rem */
+    margin-top: 1rem;
     color: rgb(255, 118, 39);
-    text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5); /* 10px / 16px = 0.625rem */
-    transform: perspective(62.5rem) rotateY(0.625deg); /* 1000px / 16px = 62.5rem */
+    text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5);
+    transform: perspective(62.5rem) rotateY(0.625deg);
   }
   .sitename1 {
     margin-top: 1rem;
-    font-size: 1.25rem; /* 20px / 16px = 1.25rem */
-    margin-left: 4rem; /* 20px / 16px = 1.25rem */
+    font-size: 1.25rem;
+    margin-left: 4rem;
     color: rgb(77, 169, 255);
-    text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5); /* 10px / 16px = 0.625rem */
-    transform: perspective(62.5rem) rotateY(0.625deg); /* 1000px / 16px = 62.5rem */
+    text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5);
+    transform: perspective(62.5rem) rotateY(0.625deg);
   }
   .slogan {
     margin-top: 1rem;
-    font-size: 0.8125rem; /* 13px / 16px = 0.8125rem */
+    font-size: 0.8125rem;
     color: rgb(32, 196, 255);
     margin-left: -1rem;
   }
-  .social-iconin {
-    display: none;
-  }
-  .social-icon {
-    display: none;
-  }
-  .imglogo{
+  .imglogo {
     width: 5rem;
     height: 5rem;
   }
-  .logo-holder img{
-
+  .logo-holder img {
   }
 }

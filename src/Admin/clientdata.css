@@ -1,38 +1,36 @@
-.cdblank{
-    height: 8rem;
-    display: block;
-}
-.dataintro{
-    color: white;
-    margin-top: 1rem;
-    display: grid;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 2rem;
+.cdblank {
+  height: 8rem;
+  display: block;
 }
 
+.dataintro {
+  color: white;
+  margin-top: 1rem;
+  display: grid;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
 
 .dataprovider {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
-  }
-  
-  .datadiv {
-    color: rgb(255, 255, 255);
-    height: auto;
-    
-    padding: 1rem;
-    margin: 1rem;
-    margin-left: 8rem;
-    margin-right: 8rem;
-    background-color: #333; /* Background color for the div */
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); /* Box shadow for the 3D effect */
-    border-radius: 10px; /* Rounded corners for a more 3D appearance */
-    transition: transform 0.2s ease-in-out; /* Optional: Add a hover effect */
-  }
-  
-  .datadiv:hover {
-    transform: scale(1.05); /* Optional: Enlarge the div on hover */
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}
+
+.datadiv {
+  color: rgb(255, 255, 255);
+  height: auto;
+  padding: 1rem;
+  margin: 1rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
+  background-color: #333;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.datadiv:hover {
+  transform: scale(1.05);
+}
