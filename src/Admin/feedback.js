@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  useNavigate,
-} from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 
 const ThankYou = () => (
   <div className="thank-you">
@@ -19,44 +12,40 @@ const FeedbackForm = () => {
   const [submitted, setSubmitted] = useState(false);
   const navigate = useNavigate(); // Initialize the useNavigate hook
 
-  const handleSubmit = () => {
-    if (feedback === "showmetheadminpanel") {
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent form submission
+    if (feedback.trim() === "showmetheadminpanel") {
       setSubmitted(true);
-      navigate("/admin"); 
+      navigate("/admin");
     } else {
       alert("Thanks for submitting feedback.");
     }
   };
 
   return (
-    <>
-      <div>
-        <div className="wholeco">
-          <h2>Dream Planner</h2>
-        </div>
-          <div>
-            <h6>Enter Your Feedback</h6>
-          </div>
-
-        <div>
-          {!submitted ? (
-            <div className="feedback-form">
-              <h2>Enter Your Feedback</h2>
-              <input
-                type="text"
-                value={feedback}
-                onChange={(e) => setFeedback(e.target.value)}
-              />
-              <h5 className="btnfbsubmit" onClick={handleSubmit}>
-                Submit
-              </h5>
-            </div>
-          ) : (
-            <ThankYou />
-          )}
-        </div>
+    <div className="feedback-container">
+      <h2 className="feedback-header">Dream Planner</h2>
+      <div className="feedback-intro">
+        <h6>Enter Your Feedback</h6>
       </div>
-    </>
+      <div className="feedback-form">
+        {!submitted ? (
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Enter your feedback"
+              value={feedback}
+              onChange={(e) => setFeedback(e.target.value)}
+            />
+            <button type="submit" className="btn-feedback-submit">
+              Submit
+            </button>
+          </form>
+        ) : (
+          <ThankYou />
+        )}
+      </div>
+    </div>
   );
 };
 

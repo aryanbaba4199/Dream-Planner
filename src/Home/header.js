@@ -31,7 +31,7 @@ function Tabmenu() {
           <div className="tab">
             <div className="logo-holder">
               <img
-                src={Logoa} // Use the imported logo variable
+                src='https://i.pinimg.com/564x/bc/1d/5f/bc1d5f581156320cabdc3b5abe8a9edc.jpg' 
                 alt="Logo"
                 width="100"
                 height="100"

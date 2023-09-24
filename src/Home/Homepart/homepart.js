@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./homepart.css";
+
 const images = [
   "https://i.pinimg.com/750x/99/64/51/99645143b39bce2cbbe115ca40c04fd8.jpg",
   "https://i.pinimg.com/564x/df/6d/02/df6d02e6e21d6bad6afbc922a739f961.jpg",
@@ -8,63 +9,62 @@ const images = [
 ];
 
 const Instapage = () => {
-  window.location.href = 'https://www.instagram.com/dreamplanner___/'
-}
-const Fbpage = () => {
-  window.location.href = 'fb.com'
-}
-const Ytpage = () => {
-  window.location.href = 'youtube.com'
-}
+  window.location.href = "https://www.instagram.com/dreamplanner___/";
+};
 
-const Whatsapp = ()=>{
-  window.location.href = "https://wa.me/+917005742790"
-}
+const Fbpage = () => {
+  window.location.href = "fb.com";
+};
+
+const Ytpage = () => {
+  window.location.href = "youtube.com";
+};
+
+const Whatsapp = () => {
+  window.location.href = "https://wa.me/+917005742790";
+};
 
 const ImageSlider = () => {
-  const [currentImage, setCurrentImage] = useState(0);
-  useEffect(() => {
-    const sliderInterval = setInterval(() => {
-      setCurrentImage((prevImage) =>
-        prevImage === images.length - 1 ? 0 : prevImage + 1
-      );
-    }, 3000); // Adjust the interval as needed
-
-    return () => {
-      clearInterval(sliderInterval);
-    };
-  }, []);
-
   return (
     <>
       <div className="homeblank"></div>
       <div className="wholecontainer">
-        <div
-          className="slider"
-          style={{
-            transform: `translateX(-${currentImage * 44}rem)`,
-          }}
-        >
-          {images.map((image, index) => (
-            <div className="slide" key={index}>
-              <img
-                src={image}
-                alt='image'
-                className="slidepic"
-              />
+        <div className="firstc">
+          <div className="fs-inside">
+            <div className="fsheading">
+              <h2 className="dream">Introducing</h2>
+              <p className="fstext">
+                Dream Planner is India's premier wedding planning and event
+                management company, specializing in curating unforgettable
+                moments and seamless celebrations. With a passion for crafting
+                extraordinary experiences, we have earned a stellar reputation
+                as the go-to choice for couples and clients seeking top-tier
+                event planning services.
+              </p>
             </div>
-          ))}
+            <div className="fsimg">
+                <div className="fsname-container">
+                  <h2 className="dream" href="/">
+                    Dream
+                  </h2>
+                  <h2 className="planner" href="/">
+                    Plannner
+                  </h2>
+                </div>
+              </div>
+
+          </div>
         </div>
       </div>
       <div className="s1">
         <div className="s1-inside">
           <h2>Mandap Theme</h2>
-          <text>
+          <p>
             "Our mandap theme work meticulously crafted by our talented theme
             designers. We specialize in creating enchanting and personalized
             mandap setups that reflect the unique vision and cultural
-            preferences of each couple.
-          </text>
+            preferences of each couple."
+          </p>
         </div>
         <div className="s1-img">
           <img
@@ -77,7 +77,7 @@ const ImageSlider = () => {
       <div className="s1">
         <div className="s1-inside">
           <h2>Floral Decoration</h2>
-          <text>
+          <p>
             Our floral decoration services are a testament to the beauty of
             nature woven into the fabric of every wedding. Our expert florists
             and decorators work harmoniously to infuse vibrant colors, fragrant
@@ -86,7 +86,7 @@ const ImageSlider = () => {
             and intricate floral backdrops, our floral designs add a touch of
             natural elegance, transforming your wedding into a fragrant and
             visually captivating celebration.
-          </text>
+          </p>
         </div>
         <div className="s1-img">
           <img
@@ -98,7 +98,7 @@ const ImageSlider = () => {
 
         <div className="s1-inside">
           <h2>Theme Entry</h2>
-          <text>
+          <p>
             Our theme entry designs are the grand opening statements of your
             wedding celebration. Our creative team crafts awe-inspiring and
             thematic entryways that set the tone for your special day. Whether
@@ -107,7 +107,7 @@ const ImageSlider = () => {
             memory. We pay meticulous attention to detail, ensuring that every
             element aligns seamlessly with your chosen theme, making your entry
             a mesmerizing experience for you and your guests.
-          </text>
+          </p>
         </div>
         <div className="s1-img">
           <img
@@ -119,8 +119,8 @@ const ImageSlider = () => {
       </div>
       <div className="s1">
         <div className="s1-inside">
-          <h2>Dance Troupe & DJ's</h2>
-          <text>
+          <h2>Dance Troupe & DJs</h2>
+          <p>
             Our dance troupe services are a celebration of rhythm and culture.
             Our skilled dancers bring vibrant and energetic performances to your
             event, showcasing a fusion of traditional and contemporary dance
@@ -128,18 +128,18 @@ const ImageSlider = () => {
             our talented troupe adds a dynamic and entertaining element to your
             celebration, leaving your guests enthralled and ready to hit the
             dance floor.
-          </text>
+          </p>
         </div>
         <div className="s1-img">
           <img
             className="s1-imgprop"
             src="https://image.wedmegood.com/resized/800X/uploads/member/628710/1635741337_BY4B5735.JPG"
-            alt="Dance Troupe & DJ's"
+            alt="Dance Troupe & DJs"
           />
         </div>
       </div>
 
-      <div className="servie-container">
+      <div className="service-container">
         <h2 className="serve">Our Services</h2>
         <div className="homeservices"></div>
         <button className="hsname">Photographer</button>
@@ -171,44 +171,47 @@ const ImageSlider = () => {
             <h3>Address</h3>
           </div>
           <div className="address-div">
-            <text>Patna, Bihar</text>
+            <p>Patna, Bihar</p>
           </div>
         </div>
 
-        <div class="follow">
+        <div className="follow">
           <h2>Follow us</h2>
-          <div class="social">
-            <div class="in">
-              <text>Instagram</text>
-              <img 
-              src="https://cdn-icons-png.flaticon.com/256/2111/2111463.png"
-              onClick={Instapage}
-              className="imgt"
-              alt="Instagram"
+          <div className="social">
+            <div className="in">
+              <p className="in">Instagram</p>
+              <img
+                src="https://cdn-icons-png.flaticon.com/256/2111/2111463.png"
+                onClick={Instapage}
+                className="imgt"
+                alt="Instagram"
               />
             </div>
             <div className="wt">
-              <text>Whatsapp</text>
-              <img src="https://cdn-icons-png.flaticon.com/256/3992/3992601.png"
-              className="imgt"
-              onClick={Whatsapp}
-              alt="Whatsapp"
+              <p className="wt">Whatsapp</p>
+              <img
+                src="https://cdn-icons-png.flaticon.com/256/3992/3992601.png"
+                className="imgt"
+                onClick={Whatsapp}
+                alt="Whatsapp"
               />
             </div>
-            <div class="yt">
-              <text>Youtube</text>
-              <img src="https://cdn-icons-png.flaticon.com/256/174/174883.png"
+            <div className="yt">
+              <p className="yt">Youtube</p>
+              <img
+                src="https://cdn-icons-png.flaticon.com/256/174/174883.png"
                 className="imgt"
                 onClick={Ytpage}
                 alt="Youtube"
               />
             </div>
-            <div class="fb" >
-              <text>Facebook</text>
-              <img src="https://cdn-icons-png.flaticon.com/256/2504/2504903.png"
-              className="imgt"
-              onClick={Fbpage}
-              alt="Facebook"
+            <div className="fb">
+              <p className="fb">Facebook</p>
+              <img
+                src="https://cdn-icons-png.flaticon.com/256/2504/2504903.png"
+                className="imgt"
+                onClick={Fbpage}
+                alt="Facebook"
               />
             </div>
           </div>
@@ -217,16 +220,15 @@ const ImageSlider = () => {
         <div className="partner">
           <h2>Our Channel Partner</h2>
           <div className="cp">
-            <img 
-            src="https://media.licdn.com/dms/image/C4D16AQHz_u7EBZvUoA/profile-displaybackgroundimage-shrink_350_1400/0/1593088031766?e=1700697600&v=beta&t=QyX-KXFlsYOy0qCZXkkRpekwVKGiBMfNiEg8QHZc-P8"
-            width='300rem'
-            height='150rem'
-            alt="Channel Partner"
+            <img
+              src="https://media.licdn.com/dms/image/C4D16AQHz_u7EBZvUoA/profile-displaybackgroundimage-shrink_350_1400/0/1593088031766?e=1700697600&v=beta&t=QyX-KXFlsYOy0qCZXkkRpekwVKGiBMfNiEg8QHZc-P8"
+              width="300rem"
+              height="150rem"
+              alt="Channel Partner"
             />
           </div>
         </div>
       </div>
-      <div />
     </>
   );
 };
