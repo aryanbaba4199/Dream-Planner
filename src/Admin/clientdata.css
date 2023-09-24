@@ -34,3 +34,19 @@
 .datadiv:hover {
   transform: scale(1.05);
 }
+.crud{
+  display: flex;
+  float: right;
+  margin-right: 2rem;
+  
+  overflow-y: visible;
+  &:hover{
+    cursor: pointer;
+    border: 4px solid red;
+    padding: 1rem;
+    background-color: black;
+   
+    border-radius: 50%;
+    
+  }
+}
