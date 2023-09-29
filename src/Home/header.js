@@ -87,7 +87,7 @@
                       Dream
                     </Nav.displayName>
                     <Nav.displayName className="sitename1" href="/">
-                      Plannner
+                      Planner
                     </Nav.displayName>
                   </div>
                   <div className="slogan">
