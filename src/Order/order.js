@@ -12,7 +12,7 @@ function OrderDetails() {
         try {
           const response = await fetch(
             // `http://localhost:4000/api/userdata/${user.email}`,
-            `http://localhost:4000/api/userdata/${user.email}`,
+            `https://dpapi-omega.vercel.app/api/userdata/${user.email}`,
             {
               headers: {
                 "Content-Type": "application/json",
