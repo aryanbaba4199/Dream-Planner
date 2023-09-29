@@ -7,22 +7,71 @@ const images = [
   "https://i.pinimg.com/564x/e2/1d/d8/e21dd8c143905300ee1a822dc2bc54b1.jpg",
   "https://i.pinimg.com/564x/ab/ae/46/abae4649b91a1671f8017e72c2eb00bd.jpg",
 ];
+  
+// Handeling on click HomeServices
+  const photo = () => {
+    window.location.href = '/photographyandVideoGraphy'; // Specify the URL you want to navigate to
+  };
+  const decor = () => {
+    window.location.href = '/decorators';
+  };
+  const venuebtn = () => {
+    window.location.href = '/venues';
+  };
+  const djbtn = () => {
+    window.location.href = '/dj'; 
+  };
+  const carbtn = () => {
+    window.location.href = '/car'; 
+  };
+  const makeupbtn = () => {
+    window.location.href = '/bridalmakeup';
+  };
+  const mehndibtn = () => {
+    window.location.href = '/mehndi';
+  }
+  const icardbtn = () => {
+    window.location.href = '/invitationCard';
+  };
+  const chreobtn = () => {
+    window.location.href = '/chreography';
+  }
+  const artistbtn = () => {
+    window.location.href = '/artist';
+  };
+  const caterbtn = () => {
+    window.location.href = '/catering';
+  };
+  
+  const dancebtn = () => {
+    window.location.href = '/dancer';
+  };
+  const honeymoonbtn = () => {
+    window.location.href = '/honeymoon';
+  };
+  const clothebtn = () => {
+    window.location.href = '/clothes';
+  };
+
 
 const Instapage = () => {
   window.location.href = "https://www.instagram.com/dreamplanner___/";
 };
 
 const Fbpage = () => {
-  window.location.href = "fb.com";
+  window.location.href = "https://www.facebook.com/AryanbabaRN";
 };
 
 const Ytpage = () => {
-  window.location.href = "youtube.com";
+  window.location.href = "https://www.youtube.com/channel/UCm-5IAa0v0Ozd5oQnO9NP5g";
 };
 
 const Whatsapp = () => {
   window.location.href = "https://wa.me/+917005742790";
 };
+const akshat = () => {
+  window.location.href = "https://www.akchhatfilmsproduction.com/"
+}; 
 
 const ImageSlider = () => {
   return (
@@ -57,20 +106,20 @@ const ImageSlider = () => {
           <div className="service-container">
         <h2 className="serve">Our Services</h2>
         <div className="homeservices"></div>
-        <button className="hsname">Photographer</button>
-        <button className="hsname">Decorators</button>
-        <button className="hsname">Wedding Venues</button>
-        <button className="hsname">DJs</button>
-        <button className="hsname">Wedding Cars</button>
-        <button className="hsname">Bridal Makeup </button>
-        <button className="hsname">Mehndi Artist</button>
-        <button className="hsname">Invitation Card</button>
-        <button className="hsname">Choreographers</button>
-        <button className="hsname">Artist Booking</button>
-        <button className="hsname">Catering Service</button>
-        <button className="hsname">Dancers</button>
-        <button className="hsname">Honeymoon</button>
-        <button className="hsname">Wedding Clothes</button>
+        <button onClick={photo} className="hsname">Photographer</button>
+        <button onClick={decor} className="hsname">Decorators</button>
+        <button onClick={venuebtn} className="hsname">Wedding Venues</button>
+        <button onClick={djbtn} className="hsname">DJs</button>
+        <button onClick={carbtn} className="hsname">Wedding Cars</button>
+        <button onClick={makeupbtn} className="hsname">Bridal Makeup </button>
+        <button onClick={mehndibtn} className="hsname">Mehndi Artist</button>
+        <button onClick={icardbtn} className="hsname">Invitation Card</button>
+        <button onClick={chreobtn} className="hsname">Choreographers</button>
+        <button onClick={artistbtn} className="hsname">Artist Booking</button>
+        <button onClick={caterbtn} className="hsname">Catering Service</button>
+        <button onClick={dancebtn} className="hsname">Dancers</button>
+        <button onClick={honeymoonbtn} className="hsname">Honeymoon</button>
+        <button onClick={clothebtn} className="hsname">Wedding Clothes</button>
       </div>
         </div>
       </div>
@@ -169,10 +218,12 @@ const ImageSlider = () => {
               width="20"
               height="30"
             />
-            <h3>Address</h3>
+            <h3 className="topicstyle">Address</h3>
           </div>
           <div className="address-div">
-            <p>Patna, Bihar</p>
+            <text className="pgalbumtext">Patna, Bihar</text>
+            <text className="pgalbumtext">Contact : +917005742790</text>
+            <text className="pgalbumtext">Email : dreamplanner4199@gmail.com</text>
           </div>
         </div>
 
@@ -215,6 +266,7 @@ const ImageSlider = () => {
                 alt="Facebook"
               />
             </div>
+            
           </div>
         </div>
 
@@ -226,6 +278,8 @@ const ImageSlider = () => {
               width="300rem"
               height="150rem"
               alt="Channel Partner"
+              onClick={akshat}
+              className="akshat"
             />
           </div>
         </div>

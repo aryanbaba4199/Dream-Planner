@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from "react";
 import './clientdata.css'
+import OrderDetails from "../Order/order";
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 function AdminPanel() {
   const [data, setData] = useState([]);
   const [userCount, setUserCount] = useState(0);
   const [lastUpdated, setLastUpdated] = useState('');
+  const [packet, setPacket] = useState([]);
 
-  
+  const { user, isAuthenticated } = useAuth0();
+  const usermail = isAuthenticated ? user.email : "";
+
   async function fetchDataAndUpdateState() {
     try {
       // const response = await fetch("http://localhost:4000/api/getdata");
@@ -16,7 +22,6 @@ function AdminPanel() {
       }
       const jsonData = await response.json();
       setData(jsonData);
-      
 
       // Count the number of users
       setUserCount(jsonData.length);
@@ -24,23 +29,48 @@ function AdminPanel() {
       // Get the current date and time as the last updated timestamp
       const currentDate = new Date();
       setLastUpdated(currentDate.toLocaleString());
-      fetchDataAndUpdateState();
+
+      
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   }
 
-  // Delete Button
-  async function deletedata(itemId) {
+  useEffect(() => {
+    fetchDataAndUpdateState(); // Initial fetch
+    const pollingInterval = setInterval(fetchDataAndUpdateState, 3000); // Poll every 3 seconds (adjust as needed)
+
+    return () => {
+      clearInterval(pollingInterval); 
+    };
+    
+  }, []);
+  
+
+  useEffect(() => {
+    // Inside your loop to find the email match
+    for (let i = 0; i < data.length; i++) {
+      const adminuserEmail = data[i].email;
+      if (adminuserEmail === usermail) {
+        setPacket(data[i]);
+        
+        break; // Exit the loop once a match is found
+      }
+    }
+  }, [data, usermail]);
+  console.log(packet);
+
+  
+  const handleDelete = async (itemId) => {
     try {
-      const response = await fetch(`https://dpapi.vercel.app/api/delete/${itemId}`, {
-        // const response = await fetch(`http://localhost:4000/api/delete/${itemId}`, {
+      // const response = await fetch(`http://localhost:4000/api/delete/${itemId}`, {
+        const response = await fetch(`https://dpapi-omega.vercel.app/api/delete/${itemId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
         },
       });
-  
+
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -49,68 +79,43 @@ function AdminPanel() {
       console.error('Error deleting data:', error);
     }
   }
-  
-
-  useEffect(() => {
-    fetchDataAndUpdateState(); // Initial fetch
-    const pollingInterval = setInterval(fetchDataAndUpdateState, 5000); // Poll every 5 seconds (adjust as needed)
-
-    return () => {
-      clearInterval(pollingInterval); 
-    };
-  }, []);
 
   return (
-    <>    <div className="cdblank" ></div>
-    <div className="dataloader">
-      <div className="dataintro">
-        <h1 className="dream">Dream Planner's Booking Data</h1>
-        <text className="serve">Last Updated: {lastUpdated}</text>
-        <text className="total user">Total Users: {userCount}</text>
-      </div>
-      <div className="dataprovider">
-        {data.map((item, index) => (
-          <div key={item._id} className="datadiv">
-            <h4>User: {index + 1}</h4>
-            <h4>Name: {item.name}</h4>
-            <h6>Mobile: {item.mobile}</h6>
-            <h6>Address: {item.address}</h6>
-            <h6>Function Type: {item.functionType}</h6>
-            <h6>Services: {item.selectedServices.join(", ")}</h6>
-            <h6>Message : {item.msg}</h6>
-            <h6>Time : {item.time}</h6>
-            <div className="crud">
-              <img
-                src="https://cdn-icons-png.flaticon.com/256/9790/9790368.png"
-                alt="Delete"
-                width='40'
-                height='40'
-                onClick={()=> deletedata(item._id)}
-              />
-              {/* <img
-                src=""
-                alt="Delete"
-                width='30'
-                height='30'
-                onClick={deletedata}
-              />
-              <img
-                src="https://cdn-icons-png.flaticon.com/256/9790/9790368.png"
-                alt="Delete"
-                width='30'
-                height='30'
-                onClick={deletedata}
-              /> */}
-
+    <>  
+      <div className="cdblank"></div>
+      <div className="dataloader">
+        <div className="dataintro">
+          <h1 className="dream">Dream Planner's Booking Data</h1>
+          <text className="serve">Last Updated: {lastUpdated}</text>
+          <text className="total user">Total Users: {userCount}</text>
+        </div>
+        <div className="dataprovider">
+          {data.map((item, index) => (
+            <div key={item._id} className="datadiv">
+              <h4>User: {index + 1}</h4>
+              <h4>Name: {item.name}</h4>
+              <h5>Email: {item.email}</h5>
+              <h6>Mobile: {item.mobile}</h6>
+              <h6>Address: {item.address}</h6>
+              <h6>Function Type: {item.functionType}</h6>
+              <h6>Services: {item.selectedServices.join(", ")}</h6>
+              <h6>Message : {item.msg}</h6>
+              <h6>Time : {item.time}</h6>
+              <div className="crud">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/256/9790/9790368.png"
+                  alt="Delete"
+                  width='40'
+                  height='40'
+                  onClick={() => handleDelete(item._id)}
+                />
+              </div>
             </div>
-          </div>
-          
-        ))}
-        
+          ))}
+        </div>
       </div>
-    </div>
+      {packet && <OrderDetails packet={packet}/>} {/* Render OrderDetails component if packet is not null */}
     </>
-
   );
 }
 

@@ -6,7 +6,7 @@
 
 .blank {
     width: auto;
-    height: 6.5rem;
+    height: 4.5rem;
     display: block;
 }
 
@@ -52,11 +52,10 @@
     margin-left: 1.875rem;
 }
 
-.usercontainer {
+.user-container {
     display: flex;
     color: white;
     justify-content: center;
-    padding: 1.25rem;
 }
 
 .userdetail {

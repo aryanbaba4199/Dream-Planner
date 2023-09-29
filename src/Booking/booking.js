@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./booking.css";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const WeddingBooking = () => {
   const [name, setName] = useState("");
@@ -9,6 +10,7 @@ const WeddingBooking = () => {
   const [bookingConfirmed, setBookingConfirmed] = useState(false);
   const [selectedFunctionType, setSelectedFunctionType] = useState("");
   const [msg , setmsg] = useState("");
+  const [username, setusername] = useState("");
 
   const functionType = [
     {
@@ -106,8 +108,16 @@ const WeddingBooking = () => {
       setServices(services.filter((service) => service !== serviceName));
     }
   };
-
+  const { user, isAuthenticated} = useAuth0();
   const handleBook = async () => {
+    let email = "";
+    if (isAuthenticated) {
+      email = user.email;
+    }
+    
+    
+    
+    
     setBookingConfirmed(true);
     let time = new Date().toISOString();
     const bookingData = {
@@ -118,11 +128,14 @@ const WeddingBooking = () => {
       msg,
       functionType,
       time,
+      email,
     };
+    console.log(bookingData);
 
     try {
+      // const response = await fetch("http://localhost:4000/api/bookings", {
       const response = await fetch("https://dpapi-omega.vercel.app/api/bookings", {
-        // const response = await fetch("http://localhost:4000/api/bookings")
+        
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -141,6 +154,7 @@ const WeddingBooking = () => {
       console.log(error);
     }
   };
+ 
 
   return (
     <>
@@ -177,6 +191,8 @@ const WeddingBooking = () => {
               onChange={(e) => setMobile(e.target.value)}
             />
           </div>
+          
+          
         </div>
 
         <div className="bookingcontainer">

@@ -1,0 +1,96 @@
+/* SignUp.css */
+.dark-theme{
+    --font-color: #FFFFFF;
+    --bg-color : #333;
+    --clr-black : rgb(0, 0, 0);
+    --shadow-color : #fe0000;
+}
+.App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    margin-top: 1rem;
+   
+}
+.SignUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+    margin: 0;
+  }
+  
+  .container {
+    background-color: var(--clr-black);
+    margin-top: 4rem;
+    border-radius: 1rem;
+    height: 35rem;
+    padding: 1.5rem;
+    
+    max-width: 30rem;
+    box-shadow: 0 0 2rem var(--shadow-color);
+    text-align: center;
+  }
+  
+  .logo {
+    margin-top: -3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  .container form {
+    margin-top: -2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+   outline: none;
+    border-radius: 1rem;
+  }
+  .signupdp{
+    margin: 3rem;
+  }
+  .btndiv{
+    display: flex;
+    margin-left: 33.5rem;
+    justify-content: center;
+  }
+  .btn {
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 3px;
+    border-radius: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 10rem;
+    &:hover{
+        background-color: #ff7b00;
+    }
+    
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 90%;
+    }
+  }
+  

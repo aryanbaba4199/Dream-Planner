@@ -1,0 +1,68 @@
+/* App.css
+
+.dark-theme{
+  --font-color: #FFFFFF;
+  --bg-color : #333;
+  --clr-black : rgb(0, 0, 0);
+  --shadow-color : #fe0000;
+}
+
+.Signin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--font-color);
+    margin: 0;
+  }
+  
+  .container {
+    background-color: var(--clr-black);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .logo {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 90%;
+    }
+  }
+   */

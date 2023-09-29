@@ -1,0 +1,93 @@
+.dark-theme{
+    --bg-color : #333;
+    --font-color : #ffffff;
+    --color-black : #000000;
+    --color-gold : #ff8400;
+}
+
+.pgblank{
+    margin-top: 10rem;
+    width: 100%;
+}
+.pgcontainer{
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+.pgtitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pg3{
+    display: flex;
+}
+.candid{
+    width: 41rem;
+    height: 41rem;
+    
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--color-gold)
+}
+.pgtextdiv{
+    margin: 2rem;
+    flex-wrap: wrap;
+    box-shadow: 0 0 1rem var(--color-black);
+    border-radius: 1rem;
+    width: 44rem;
+    padding: 1rem;
+}
+.pgtext{
+    margin: 1rem;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    text-shadow: 0 0 1rem var(--color-gold);
+    font-size:1.2rem ;
+}
+.line{
+    border: 2px solid var(--color-black);
+    margin: 2rem;
+    box-shadow: 0 0 1rem var(--color-gold);
+}
+.pg-bottom-holder{
+    display: flex;
+    flex-wrap: wrap !important;
+}
+.pricing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pricespec{
+    display: flex;
+    padding: 0.5rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 2rem;
+    justify-content: space-between;
+    width: 20%;
+    border : 2px solid var(--color-black);
+}
+
+.pgalbum{
+    margin : 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+.pgalbumtext{
+    display: flex;
+    justify-content: center;
+}
+.rupee{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    
+}
+.bookbtn{
+    display: flex;
+    justify-content: right;
+    float: right;
+    margin-bottom: 3rem;
+}
