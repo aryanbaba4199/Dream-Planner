@@ -1,3 +1,4 @@
+import AppRoutes from '../Routes/routes';
 import Tabmenu from './header'
 
 import './header.css'
@@ -9,6 +10,7 @@ function Home(){
         
         <div>
         <Tabmenu/>
+        
         </div>
         
         

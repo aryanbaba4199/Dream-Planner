@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './clientdata.css'
 import OrderDetails from "../Order/order";
-import { useAuth0 } from "@auth0/auth0-react";
+import { useAuth } from "../Authentication/authcontext";
 
 
 function AdminPanel() {
@@ -10,8 +10,8 @@ function AdminPanel() {
   const [lastUpdated, setLastUpdated] = useState('');
   const [packet, setPacket] = useState([]);
 
-  const { user, isAuthenticated } = useAuth0();
-  const usermail = isAuthenticated ? user.email : "";
+  const { user, isAuthenticated } = useAuth();
+  // const usermail = isAuthenticated ? user.email : "";
 
   async function fetchDataAndUpdateState() {
     try {
@@ -47,18 +47,7 @@ function AdminPanel() {
   }, []);
   
 
-  useEffect(() => {
-    // Inside your loop to find the email match
-    for (let i = 0; i < data.length; i++) {
-      const adminuserEmail = data[i].email;
-      if (adminuserEmail === usermail) {
-        setPacket(data[i]);
-        
-        break; // Exit the loop once a match is found
-      }
-    }
-  }, [data, usermail]);
-  console.log(packet);
+  
 
   
   const handleDelete = async (itemId) => {
@@ -101,6 +90,8 @@ function AdminPanel() {
               <h6>Services: {item.selectedServices.join(", ")}</h6>
               <h6>Message : {item.msg}</h6>
               <h6>Time : {item.time}</h6>
+              <h6>Status : {item.status}</h6>
+              <h6>Payments : {item.payment}</h6>
               <div className="crud">
                 <img
                   src="https://cdn-icons-png.flaticon.com/256/9790/9790368.png"

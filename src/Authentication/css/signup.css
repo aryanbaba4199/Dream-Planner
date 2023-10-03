@@ -68,29 +68,26 @@
   .signupdp{
     margin: 3rem;
   }
-  .btndiv{
+  .btndiver{
     display: flex;
-    margin-left: 33.5rem;
     justify-content: center;
+    color: var(--font-color);
   }
-  .btn {
-    background-color: #007BFF;
-    color: #fff;
-    border-radius: 3px;
+  .btnd{
+    background-color: var(--bg-color);
+    padding: 1rem;
     border-radius: 1rem;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-    width: 10rem;
     &:hover{
-        background-color: #ff7b00;
+      background-color: var(--shadow-color);
     }
-    
   }
   
+ 
+  
   @media screen and (max-width: 768px) {
-    .container {
-      width: 90%;
+    
+    .signupdp{
+      display: none;
     }
   }
   

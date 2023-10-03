@@ -168,4 +168,8 @@
     .blank {
         display: block;
     }
+    .bookbtn {
+        margin-right: 8rem;
+        
+    }
 }

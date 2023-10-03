@@ -403,7 +403,7 @@
   }
 
   .hsname {
-    width: 12rem;
+    width: 11rem;
     align-items: center;
     font-size: 1rem;
     padding: 0.1rem;
@@ -428,9 +428,14 @@
     display: flex;
     flex-direction: column;
   }
+  .follow{
+    margin-top: 2rem;
+    margin-left: 1rem;
+  }
+  .social{
+    display: flex;
+    padding: 1rem;
+  }
+  
 }
 
-@media (max-width: 480px) {
-  
-  
-}

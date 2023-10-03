@@ -118,40 +118,65 @@
   color: rgb(32, 196, 255);
   font-size: 1rem;
 }
-.auth{
-  color: var(--main-font);
-  background-color: var(--bg-color);
-  margin-left: 3rem;
-  padding: 1rem;
-  display: flex;
-  width: 90rem;
-  height: fit-content;
-  float: right;
-}
-.username{
-  margin-left: 5rem;
-  text-shadow: 0rem 0rem 0.5rem rgb(255, 108, 10);
-}
-.auth0{
-  padding: 0.5rem;
-  background-color: var(--color-black);
-  margin-left: 1rem;
-  border-radius: 0.5rem;
-  &:hover{
-    background-color: darkblue !important;
-    cursor: pointer;
-    box-shadow: 0.0rem 0.0rem 1.0rem rgb(195, 101, 7);
-  }
+.imglogo{
+  width: 5rem;
+  height: 5rem;
 }
 
+.username{
+  margin-left: 5rem;
+  color: rgb(255, 118, 39);
+  text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5);
+  transform: perspective(62.5rem) rotateY(0.625deg);
+}
+.slogan{
+  display: grid;
+}
+.auth1{
+  margin-right: 2rem;
+  margin-top: 4rem;
+  
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2.0rem;
+}
+.auth{
+  display: none;
+}
+
+
+
+
+/* For screens up to 768px (Mobile) */
 @media (max-width: 768px) {
+  .auth{
+    display: block;
+    margin-left: 10rem;
+    margin-top: -4.5rem;
+  }
+  .auth1{
+    display: none;
+  }
   .wholeheader {
     display: flex;
-    width: auto;
+    flex-wrap: wrap;
     margin-top: -1rem;
     height: 12rem;
     top: 0;
-    flex-direction: column;
+    flex-direction: row;
+  }
+  .tab{
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--main-font);
+    background-color: var(--bg-color);
+    
+  }
+  .logo-holder{
+    margin-top: 1rem;
+  }
+  .sitenamecontainer{
+    font-size: 1.3rem;
   }
   .part2 {
     display: flex;
@@ -159,48 +184,23 @@
     margin: 0.2rem;
     max-height: none;
     height: 2.5rem;
-    overflow: visible;
     flex-wrap: wrap;
+    margin-top: -3rem;
   }
-  .bio {
-    width: 4.5rem;
-    height: 2.0rem;
-    justify-content: center;
-    font-size: 1rem;
-    padding: 0rem;
+  .bio{
+    
+    width: 4.2rem;
   }
-  .sitenamecontainer {
-    margin-left: 3rem;
-    font-weight: bold;
-    margin-bottom: 0rem;
-    text-transform: uppercase;
-  }
-  .sitename {
-    font-size: 1.25rem;
-    margin-right: -3.125rem;
-    margin-top: 1rem;
-    color: rgb(255, 118, 39);
-    text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5);
-    transform: perspective(62.5rem) rotateY(0.625deg);
-  }
-  .sitename1 {
-    margin-top: 1rem;
-    font-size: 1.25rem;
+  
+  .username {
     margin-left: 4rem;
-    color: rgb(77, 169, 255);
-    text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5);
-    transform: perspective(62.5rem) rotateY(0.625deg);
   }
-  .slogan {
-    margin-top: 1rem;
-    font-size: 0.8125rem;
-    color: rgb(32, 196, 255);
-    margin-left: -1rem;
-  }
-  .imglogo {
+  .imglogo{
     width: 5rem;
     height: 5rem;
   }
-  .logo-holder img {
-  }
+    
+  
+
+  /* Add any other mobile-specific styling here */
 }

@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { useAuth0 } from "@auth0/auth0-react";
+import { useAuth } from "../Authentication/authcontext";
 
 function OrderDetails() {
-  const { user, isAuthenticated } = useAuth0();
+  const { name, useremail, isAuthenticated } = useAuth();
   const [userData, setUserData] = useState([]); // State to store user booking data
   const [loading, setLoading] = useState(true); // State to track loading
+  
 
   useEffect(() => {
     if (isAuthenticated) {
       const fetchUserData = async () => {
         try {
           const response = await fetch(
-            // `http://localhost:4000/api/userdata/${user.email}`,
-            `https://dpapi-omega.vercel.app/api/userdata/${user.email}`,
+            // `http://localhost:4000/api/userdata/${useremail}`,
+            `https://dpapi-omega.vercel.com/api/userdata/${useremail}`,
             {
               headers: {
                 "Content-Type": "application/json",
@@ -34,10 +35,24 @@ function OrderDetails() {
 
       fetchUserData(); // Call the fetchUserData function when the component mounts
     }
-  }, [isAuthenticated, user]);
+  }, [isAuthenticated, name]); // Include 'name' as a dependency
+
+  if (!isAuthenticated) {
+    return (
+      <div className="loading">
+        <h2 className="topicstyle">You are not logged in.</h2>
+        <p>Please log in to view your order details.</p>
+      </div>
+    ); 
+  }
 
   if (loading) {
-    return <div>Loading...</div>; // Display a loading indicator while data is being fetched
+    return (
+      <div className="loading">
+        <h2 className="topicstyle">Loading...</h2>
+        <p>If You are not logged in, loading will never be over</p>
+      </div>
+    ); // Display a loading indicator while data is being fetched
   }
 
   if (userData.length === 0) {
@@ -49,7 +64,7 @@ function OrderDetails() {
       <div className="cdblank"></div>
       <div className="dataloader">
         <div className="dataintro">
-          <h1 className="dream">{user.email}</h1>
+          <h1 className="dream">{name}</h1> {/* Display the user's name */}
           <h2 className="planner">Your Booking Data</h2>
         </div>
         <div className="dataprovider">
@@ -69,14 +84,10 @@ function OrderDetails() {
               </h6>
               <h6>Message: {userItem.msg}</h6>
               <h6>Time: {userItem.time}</h6>
+              <h6>Status : {userItem.status}</h6>
+              <h6>Payments : {userItem.payment}</h6>
               <div className="crud">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/256/9790/9790368.png"
-                  alt="Delete"
-                  width="40"
-                  height="40"
-                //   onClick={() => handleDelete(item._id)}
-                />
+                
               </div>
             </div>
           ))}

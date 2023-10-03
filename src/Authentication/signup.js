@@ -24,7 +24,8 @@ function SignUp() {
     e.preventDefault(); // Prevent the default form submission behavior
   
     try {
-      const response = await fetch("http://localhost:4000/api/signup", {
+      // const response = await fetch("http://localhost:4000/api/signup", {
+        const response = await fetch("https://dpapi-omega.vercel.app/api/signup", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -34,14 +35,16 @@ function SignUp() {
   
       if (!response.ok) {
         toast('Email Already Registered');
+        console.log("response not ok ");
         throw new Error('Network response was not ok');
       }
-  
+      toast("Registration Successful");
       const responseData = await response.json();
       
       // Check the response message for registration status
       if (responseData.message === 'Registration successful') {
         toast('Registration Success');
+        
         
         console.log('Registration successful');
       } else if (responseData.message === 'You are already registered') {
@@ -50,6 +53,7 @@ function SignUp() {
         // You can set a state variable or use an alert to display the message to the user
       }
     } catch (error) {
+      toast("Try again After some time")
       console.error('Error sending data to the backend:', error);
     }
   };
@@ -100,10 +104,10 @@ function SignUp() {
               required
             />
           </div>
-          <div className='btndiv'>
-            <button type="submit" className="btn">
+          <div className='btndiver'>
+            <h4 type="submit" className="btnd">
               Sign Up
-            </button>
+            </h4>
           </div>
         </form>
       </div>

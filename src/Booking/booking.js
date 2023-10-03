@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import "./booking.css";
-import { useAuth0 } from "@auth0/auth0-react";
+import { useAuth } from "../Authentication/authcontext";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const WeddingBooking = () => {
   const [name, setName] = useState("");
+  // const [useremail, setUseremail] = useState("");
   const [address, setAddress] = useState("");
   const [mobile, setMobile] = useState("");
+  const [selectedFunctionType, setSelectedFunctionType] = useState("");
   const [services, setServices] = useState([]);
   const [bookingConfirmed, setBookingConfirmed] = useState(false);
-  const [selectedFunctionType, setSelectedFunctionType] = useState("");
+  
   const [msg , setmsg] = useState("");
-  const [username, setusername] = useState("");
+  
 
   const functionType = [
     {
@@ -108,29 +112,33 @@ const WeddingBooking = () => {
       setServices(services.filter((service) => service !== serviceName));
     }
   };
-  const { user, isAuthenticated} = useAuth0();
+  const {useremail, isAuthenticated} = useAuth();
   const handleBook = async () => {
-    let email = "";
-    if (isAuthenticated) {
-      email = user.email;
-    }
-    
-    
-    
-    
+    toast("Booking In process...");
+
     setBookingConfirmed(true);
     let time = new Date().toISOString();
+    let email = "";
+    let status = "Processing...";
+    let payment = "No Transaction Found";
+    if (isAuthenticated) {
+      email = useremail;
+    }
+    console.log(email);
     const bookingData = {
       name,
+      email, 
       address,
       mobile,
       selectedServices: services,
       msg,
       functionType,
       time,
-      email,
+      status,
+      payment
+      
     };
-    console.log(bookingData);
+    
 
     try {
       // const response = await fetch("http://localhost:4000/api/bookings", {
@@ -246,14 +254,10 @@ const WeddingBooking = () => {
         <div className="bookbtn">
           <h2 onClick={handleBook} className="bookbtnin">
             Book
-            {bookingConfirmed && (
-              <p className="cnfmsg">
-                Booking in process......<br/><br/> Our planner will contact you soon.
-              </p>
-            )}
           </h2>
         </div>
       </div>
+      <ToastContainer/>
     </>
   );
 };

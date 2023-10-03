@@ -231,7 +231,7 @@ const ImageSlider = () => {
           <h2>Follow us</h2>
           <div className="social">
             <div className="in">
-              <p className="in">Instagram</p>
+              <text className="in">Instagram</text>
               <img
                 src="https://cdn-icons-png.flaticon.com/256/2111/2111463.png"
                 onClick={Instapage}
@@ -240,7 +240,7 @@ const ImageSlider = () => {
               />
             </div>
             <div className="wt">
-              <p className="wt">Whatsapp</p>
+              <text className="wt">Whatsapp</text>
               <img
                 src="https://cdn-icons-png.flaticon.com/256/3992/3992601.png"
                 className="imgt"
@@ -249,7 +249,7 @@ const ImageSlider = () => {
               />
             </div>
             <div className="yt">
-              <p className="yt">Youtube</p>
+              <text className="yt">Youtube</text>
               <img
                 src="https://cdn-icons-png.flaticon.com/256/174/174883.png"
                 className="imgt"
@@ -258,7 +258,7 @@ const ImageSlider = () => {
               />
             </div>
             <div className="fb">
-              <p className="fb">Facebook</p>
+              <text className="fb">Facebook</text>
               <img
                 src="https://cdn-icons-png.flaticon.com/256/2504/2504903.png"
                 className="imgt"

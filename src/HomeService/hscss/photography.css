@@ -91,3 +91,10 @@
     float: right;
     margin-bottom: 3rem;
 }
+@media(max-width:767px){
+    .pgcontainer{
+        width: 24.3rem;
+        border: 2px solid red;
+    }
+    
+}

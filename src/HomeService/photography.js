@@ -1,10 +1,9 @@
 import React from "react";
 import "./hscss/photography.css";
 function photography() {
-
-  const book = ()=>{
-    window.location.href = '/booking';
-  }
+  const book = () => {
+    window.location.href = "/booking";
+  };
   return (
     <>
       <div className="pgblank"></div>
@@ -48,45 +47,38 @@ function photography() {
         </div>
         <div className="pg3">
           <div className="pgtextdiv">
-          <h4 className="topicstyle">Candid Cinematography</h4>
-          <h4 className="topicstyle">Cinematic Photography</h4>
-          <h4 className="topicstyle">Couple Portaraight</h4>
-          <h4 className="topicstyle">& Many More</h4>
-
-            
+            <h4 className="topicstyle">Candid Cinematography</h4>
+            <h4 className="topicstyle">Cinematic Photography</h4>
+            <h4 className="topicstyle">Couple Portaraight</h4>
+            <h4 className="topicstyle">& Many More</h4>
           </div>
-
-          
-          
-          
         </div>
         <div className="pgbottom">
           <div className="line"></div>
           <span className="pricing">
             <h2 className="dream">Pricing</h2>
-            
-            </span>
-            <div className="line"></div>
-            <div className="pg-bottom-holder">
+          </span>
+          <div className="line"></div>
+          <div className="pg-bottom-holder">
             <div className="pricespec">
               <h4 className="pgalbum">Package</h4>
               <text className="pgalbumtext">
-                Starts from____ <br/> 
+                Starts from____ <br />
                 <img
-                src="https://cdn-icons-png.flaticon.com/256/2769/2769454.png"
-                width='30.5rem'
-                className="rupee"
-                /> 51000 / day
-                
+                  src="https://cdn-icons-png.flaticon.com/256/2769/2769454.png"
+                  width="30.5rem"
+                  className="rupee"
+                />{" "}
+                51000 / day
               </text>
             </div>
             <div className="pricespec">
               <h4 className="pgalbum">Album</h4>
               <text className="pgalbumtext">
                 <img
-                src="https://cdn-icons-png.flaticon.com/256/2769/2769454.png"
-                width='30.5rem'
-                className="rupee"
+                  src="https://cdn-icons-png.flaticon.com/256/2769/2769454.png"
+                  width="30.5rem"
+                  className="rupee"
                 />
                 10,000 per 40 Pages
               </text>
@@ -94,46 +86,37 @@ function photography() {
             <div className="pricespec">
               <h4 className="pgalbum">Travel Cost</h4>
               <text className="pgalbumtext">
-                Outstation traverl & stay charges <br/>
+                Outstation traverl & stay charges <br />
                 borne by client
-                
               </text>
             </div>
             <div className="pricespec">
               <h4 className="pgalbum">Payment Term</h4>
               <text className="pgalbumtext">
-                Booking Time : 50% <br/>
-                Before Event : 80% <br/>
+                Booking Time : 50% <br />
+                Before Event : 80% <br />
                 After Event : 20%
               </text>
-              
             </div>
             <div className="pricespec">
               <h4 className="pgalbum">Extra Service</h4>
               <text className="pgalbumtext">
-                providing extra service   <br/>
+                providing extra service <br />
                 cost : 5% per hour of Booking Amount
-                
               </text>
             </div>
             <div className="pricespec">
               <h4 className="pgalbum">Delivery Time</h4>
-              <text className="pgalbumtext">
-                2 Week 
-              </text>
-            </div>
-            
-            </div>
-            <div className="bookbtn">
-            
-            
-            <button className="topicstyle" onClick={book}>Book Now</button>
+              <text className="pgalbumtext">2 Week</text>
             </div>
           </div>
-          
-
+          <div className="bookbtn">
+            <button className="topicstyle" onClick={book}>
+              Book Now
+            </button>
+          </div>
+        </div>
       </div>
-      
     </>
   );
 }
