@@ -82,7 +82,7 @@ function Signin() {
               />
             </div>
             <div className='btndiver'>
-              <h4 type="submit" className="btnd">
+              <h4 onClick={signinSubmit} type="submit" className="btnd">
                 Sign In
               </h4>
             </div>

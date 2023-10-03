@@ -14,7 +14,7 @@ function Tabmenu() {
   console.log(isAuthenticated, name, "Email : ", useremail);
 
   const logintbtn = () => {
-    window.location.href = "http://localhost:3000/signin";
+    window.location.href = "https://www.dreamplanner.in/signin";
   };
 
   const tooggleTheme = () => {
@@ -109,7 +109,7 @@ function Tabmenu() {
           ) : (
             <Nav.Link
               className="bio"
-              onClick={() =>
+              onClick={(logintbtn) =>
                 logintbtn({ loginParams: { returnTo: window.location.origin } })
               }
             >

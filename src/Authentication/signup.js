@@ -105,7 +105,7 @@ function SignUp() {
             />
           </div>
           <div className='btndiver'>
-            <h4 type="submit" className="btnd">
+            <h4 onClick={signupSubmit} type="submit" className="btnd">
               Sign Up
             </h4>
           </div>
