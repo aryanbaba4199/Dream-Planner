@@ -109,8 +109,8 @@ function Tabmenu() {
           ) : (
             <Nav.Link
               className="bio"
-              onClick={(logintbtn) =>
-                logintbtn({ loginParams: { returnTo: window.location.origin } })
+              onClick={() =>
+                logintbtn({ loginParams: { returnTo: "https:dreamplanner.in" } })
               }
             >
               Login
