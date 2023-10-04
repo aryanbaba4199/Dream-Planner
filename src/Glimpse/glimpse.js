@@ -10,7 +10,8 @@ function Posts() {
   // Function to fetch posts from your backend API
   const fetchPosts = async () => {
     try {
-      const response = await fetch("http://localhost:4000/api/glimpse");
+      // const response = await fetch("http://localhost:4000/api/glimpse");
+      const response = await fetch("https://dpapi-omega.vercel.app/api/glimpse");
       if (response.ok) {
         const data = await response.json();
         setPosts(data);
@@ -28,7 +29,8 @@ function Posts() {
 
   const handleSubmit = async (post) => {
     try {
-      const response = await fetch("http://localhost:4000/api/glimpse", {
+      // const response = await fetch("http://localhost:4000/api/glimpse", {
+        const response = await fetch("https://dpapi-omega.vercel.app/api/glimpse", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -47,12 +49,17 @@ function Posts() {
       console.log("Error Caught:", err);
     }
   };
+  const allowedEmails = [
+    "aryanbaba4199@gmail.com", 
+    "dreamplanner4199@gmail.com", 
+    "an.rajdubey@gmail.com"
+  ];
 
   return (
     <>
       <div className="glimpseblank"></div>
       <div className="create-container">
-        {isAuthenticated && useremail === "aryanbaba4199@gmail.coma" && (
+        {isAuthenticated && allowedEmails.includes(useremail)  && (
           <>
             <h1>Create a Post</h1>
             <PostForm onSubmit={handleSubmit} />
