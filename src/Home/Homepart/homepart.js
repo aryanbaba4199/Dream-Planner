@@ -126,12 +126,12 @@ const ImageSlider = () => {
       <div className="s1">
         <div className="s1-inside">
           <h2>Mandap Theme</h2>
-          <p>
+          <text className="hp-text">
             "Our mandap theme work meticulously crafted by our talented theme
             designers. We specialize in creating enchanting and personalized
             mandap setups that reflect the unique vision and cultural
             preferences of each couple."
-          </p>
+          </text>
         </div>
         <div className="s1-img">
           <img
@@ -144,7 +144,7 @@ const ImageSlider = () => {
       <div className="s1">
         <div className="s1-inside">
           <h2>Floral Decoration</h2>
-          <p>
+          <text className="hp-text">
             Our floral decoration services are a testament to the beauty of
             nature woven into the fabric of every wedding. Our expert florists
             and decorators work harmoniously to infuse vibrant colors, fragrant
@@ -153,7 +153,7 @@ const ImageSlider = () => {
             and intricate floral backdrops, our floral designs add a touch of
             natural elegance, transforming your wedding into a fragrant and
             visually captivating celebration.
-          </p>
+          </text>
         </div>
         <div className="s1-img">
           <img
@@ -165,7 +165,7 @@ const ImageSlider = () => {
 
         <div className="s1-inside">
           <h2>Theme Entry</h2>
-          <p>
+          <text className="hp-text">
             Our theme entry designs are the grand opening statements of your
             wedding celebration. Our creative team crafts awe-inspiring and
             thematic entryways that set the tone for your special day. Whether
@@ -174,7 +174,7 @@ const ImageSlider = () => {
             memory. We pay meticulous attention to detail, ensuring that every
             element aligns seamlessly with your chosen theme, making your entry
             a mesmerizing experience for you and your guests.
-          </p>
+          </text>
         </div>
         <div className="s1-img">
           <img
@@ -187,7 +187,7 @@ const ImageSlider = () => {
       <div className="s1">
         <div className="s1-inside">
           <h2>Dance Troupe & DJs</h2>
-          <p>
+          <text className="hp-text">
             Our dance troupe services are a celebration of rhythm and culture.
             Our skilled dancers bring vibrant and energetic performances to your
             event, showcasing a fusion of traditional and contemporary dance
@@ -195,7 +195,7 @@ const ImageSlider = () => {
             our talented troupe adds a dynamic and entertaining element to your
             celebration, leaving your guests enthralled and ready to hit the
             dance floor.
-          </p>
+          </text>
         </div>
         <div className="s1-img">
           <img
@@ -231,7 +231,7 @@ const ImageSlider = () => {
           <h2>Follow us</h2>
           <div className="social">
             <div className="in">
-              <text className="in">Instagram</text>
+              <text className="in" onClick={Instapage}>Instagram</text>
               <img
                 src="https://cdn-icons-png.flaticon.com/256/2111/2111463.png"
                 onClick={Instapage}
@@ -240,7 +240,7 @@ const ImageSlider = () => {
               />
             </div>
             <div className="wt">
-              <text className="wt">Whatsapp</text>
+              <text className="wt" onClick={Whatsapp}>Whatsapp</text>
               <img
                 src="https://cdn-icons-png.flaticon.com/256/3992/3992601.png"
                 className="imgt"
@@ -249,7 +249,7 @@ const ImageSlider = () => {
               />
             </div>
             <div className="yt">
-              <text className="yt">Youtube</text>
+              <text className="yt" onClick={Ytpage}>Youtube</text>
               <img
                 src="https://cdn-icons-png.flaticon.com/256/174/174883.png"
                 className="imgt"
@@ -258,7 +258,7 @@ const ImageSlider = () => {
               />
             </div>
             <div className="fb">
-              <text className="fb">Facebook</text>
+              <text className="fb" onClick={Fbpage}>Facebook</text>
               <img
                 src="https://cdn-icons-png.flaticon.com/256/2504/2504903.png"
                 className="imgt"

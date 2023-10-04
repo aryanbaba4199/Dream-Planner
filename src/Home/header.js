@@ -9,7 +9,7 @@ import { useAuth } from "../Authentication/authcontext";
 // Social Netwoek handling
 
 function Tabmenu() {
-  const [toggle, settoggle] = useState("dark-theme");
+  const [toggle, settoggle] = useState("light");
   const { isAuthenticated, name, useremail, logout } = useAuth();
   console.log(isAuthenticated, name, "Email : ", useremail);
 
@@ -18,10 +18,10 @@ function Tabmenu() {
   };
 
   const tooggleTheme = () => {
-    if (toggle === "dark-theme") {
-      settoggle("light-theme");
+    if (toggle === "light") {
+      settoggle("dark");
     } else {
-      settoggle("dark-theme");
+      settoggle("light");
     }
   };
   useEffect(() => {
@@ -110,7 +110,9 @@ function Tabmenu() {
             <Nav.Link
               className="bio"
               onClick={() =>
-                logintbtn({ loginParams: { returnTo: "https:dreamplanner.in" } })
+                logintbtn({
+                  loginParams: { returnTo: "https:dreamplanner.in" },
+                })
               }
             >
               Login

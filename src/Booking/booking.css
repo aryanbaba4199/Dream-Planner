@@ -1,7 +1,25 @@
+.dark{
+    --main-font : rgb(255, 255, 255);
+    --bg-color : #333;
+    --btn-bg : #333;
+    --color-black : #000000;
+    --box-shadow : #000000;
+    --color-goldenrod : #ff911c;
+  }
+  .light{
+    --main-font : rgb(255, 255, 255);
+    --bg-color : #ffeaf7;
+    --btn-bg : #005fb8;
+    --color-black : #2992f4;
+    --color-goldenrod : #e74900;
+  }
 .wholepage {
     margin-top: 4rem;
     flex-direction: row;
     width: auto;
+    
+    background-color: var(--bg-color);
+    color: var(--main-font);
 }
 
 .blank {
@@ -11,7 +29,7 @@
 }
 
 .bookingcontainer {
-    color: white;
+    color: var(--main-font);
 }
 
 .servic {
@@ -23,10 +41,10 @@
     width: auto;
     margin: 1rem;
     text-align: center;
-    color: white;
-    background-color: black;
+    color: var(--main-font);
+    background-color: var(--color-black);
     padding: 1rem;
-    box-shadow: 0 0 2rem rgb(245, 132, 2);
+    box-shadow: 0 0 2rem rgb(255, 35, 248);
     border-radius: 1.25rem;
     display: flex;
     justify-content: space-around;
@@ -47,14 +65,15 @@
 
 .userdiv {
     display: flex;
-    color: white;
+    color: var(--main-font);
     margin-top: 1.125rem;
     margin-left: 1.875rem;
 }
 
-.user-container {
+
+.usercontainer {
     display: flex;
-    color: white;
+    color: var(--main-font);
     justify-content: center;
 }
 
@@ -63,8 +82,9 @@
     font-weight: bold;
     text-shadow: 0.3rem 0.3rem 1rem rgba(255, 2, 2, 0.5);
     letter-spacing: 0.2rem;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--color-black);
     padding: 1rem;
+    color: var(--main-font);
     justify-content: center;
     border-radius: 10px;
     box-shadow: 0.5rem 0.5rem, 1rem, rgba(255, 166, 2, 0.2);
@@ -103,8 +123,13 @@
 .msg-holder {
     display: flex;
     justify-content: center;
-    color: white;
+    background-color: var(--color-black);
+    width: fit-content;
+    color: var(--main-font);
     padding: 2rem;
+    flex-direction: column;
+    margin-left: 29rem;
+    border-radius: 2rem;
 }
 
 .msgtitle {
@@ -115,29 +140,32 @@
 }
 
 .msgbox {
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .bookbtn {
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
-    color: white;
+    color: var(--main-font);
     text-shadow: 0.3rem 0.3rem 1rem rgba(255, 2, 2, 0.5);
     box-shadow: 0.5rem 0.5rem, 1rem, rgba(255, 166, 2, 0.2);
 }
 
 .bookbtnin {
-    color: white;
+
+    color: var(--main-font);
     border-radius: 0.5rem;
     font-size: 1.5625rem;
     margin-bottom: 3.125rem;
-    background-color: black;
+    background-color: var(--color-black);
     padding: 0.5rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    &:hover {
-        box-shadow: 0 0 1.5625rem goldenrod;
+    &:hover{
+        box-shadow: 0 0 1.5625rem rgb(218, 32, 137);
         cursor: pointer;
+        background-color: #e74900;
     }
 }
 
@@ -151,13 +179,16 @@
 }
 
 @media (max-width: 55.625rem) {
+    .blank {
+        height: 8rem;
+    }
     .wholepage {
         margin-top: 4rem;
         flex-direction: row;
         width: auto;
     }
     .bookingcontainer {
-        color: white;
+        color: var(--main-font);
     }
     .userdiv {
         display: flex;
@@ -170,6 +201,12 @@
     }
     .bookbtn {
         margin-right: 8rem;
+        
+    }
+    .msg-holder{
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        
         
     }
 }

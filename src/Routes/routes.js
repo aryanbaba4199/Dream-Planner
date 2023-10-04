@@ -9,6 +9,7 @@ import ServicesList from "../Services/service";
 import WeddingBooking from "../Booking/booking";
 import Teams from "../Teams/teams";
 import About from "../about/about";
+import Glimpse from "../Glimpse/glimpse";
 import Career from "../career/career";
 import FeedbackForm from "../Admin/feedback";
 import Signin from "../Authentication/signin";
@@ -47,6 +48,7 @@ function AppRoutes() {
       <Route path="/signin" element={<Signin />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/admin" element={<Admin />} />
+      <Route path="/gallery" element={<Glimpse/>} />
       <Route path="/orderstatus" element={<OrderStatus />} />
 
       {/* Home service routes */}

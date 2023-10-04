@@ -52,8 +52,8 @@ function AdminPanel() {
   
   const handleDelete = async (itemId) => {
     try {
-      // const response = await fetch(`http://localhost:4000/api/delete/${itemId}`, {
-        const response = await fetch(`https://dpapi-omega.vercel.app/api/delete/${itemId}`, {
+      const response = await fetch(`http://localhost:4000/api/delete/${itemId}`, {
+        // const response = await fetch(`https://dpapi-omega.vercel.app/api/delete/${itemId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

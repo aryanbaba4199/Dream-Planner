@@ -21,8 +21,7 @@ function SignUp() {
   };
 
   const signupSubmit = async (e) => {
-    e.preventDefault(); // Prevent the default form submission behavior
-  
+    e.preventDefault(); 
     try {
       // const response = await fetch("http://localhost:4000/api/signup", {
         const response = await fetch("https://dpapi-omega.vercel.app/api/signup", {
@@ -48,12 +47,12 @@ function SignUp() {
         
         console.log('Registration successful');
       } else if (responseData.message === 'You are already registered') {
-        // Email is already registered, display an error message to the user
+        
         console.log('Email is already registered');
-        // You can set a state variable or use an alert to display the message to the user
+        
       }
     } catch (error) {
-      toast("Try again After some time")
+      toast("Try again After some time");
       console.error('Error sending data to the backend:', error);
     }
   };

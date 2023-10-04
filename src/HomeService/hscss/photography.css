@@ -92,9 +92,33 @@
     margin-bottom: 3rem;
 }
 @media(max-width:767px){
+    .pgblank{
+        margin-top: 12rem;
+    }
     .pgcontainer{
-        width: 24.3rem;
+        width: 22.5rem;
         border: 2px solid red;
     }
+    .pgtitle{
+        margin: 0rem;
+    }
+    .pg3{
+        margin: 0rem;
+        display: grid;
+    }
+
+    .pgtextdiv{
+        margin: 0rem;
+        width: 100%;
+        height: fit-content;
+    }
+    .candid{
+        width: 100%;
+    }
+    .pg-bottom-holder{
+        display: grid;
+        width: 90rem;
+    }
+
     
 }

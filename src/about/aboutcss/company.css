@@ -1,7 +1,7 @@
 
 .wholeco{
-    color: white;
-    background-color: rgb(27, 27, 27);
+    color: var(--main-font);
+    background-color:var(--bg-color);
     margin-top: 8.6rem;
     
     
@@ -31,12 +31,12 @@
   .topicstyle{
     font-size: 1.5rem;
     margin-top: 1rem;
-    color: rgb(255, 255, 255);
+    color: var(--main-font);
     text-transform: uppercase; 
    
     text-shadow: 0.3rem 0.3rem 1rem rgba(255, 2, 2, 0.5);
     letter-spacing: 0.2rem; 
-    background-color: rgba(0, 0, 0, 0.2); 
+    background-color: var(--color-black); 
     padding: 1rem 2rem; 
     border-radius: 10px; 
     box-shadow: 0.5rem 0.5rem, 1rem, rgba(255, 166, 2, 0.2);
@@ -50,6 +50,16 @@
     background-color: black;
     border-radius: 10px; 
     box-shadow: 0.5rem 0.5rem, 1rem, rgba(210, 39, 1, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    .topicdiv {
+      margin : 0.5rem;
+      margin-top: 2rem;
+    }
+    .tdetail {
+      margin: 0rem;
+    }
   }
  
   

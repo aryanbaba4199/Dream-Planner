@@ -1,9 +1,19 @@
-.dark-theme{
-  --font-color: #000000;
-  --bg-color : #fffabf;
-  --color-black: #000000;
+.dark{
+  --main-font : rgb(255, 255, 255);
+  --bg-color : #333;
+  --btn-bg : #333;
+  --color-black : #000000;
+  --box-shadow : #000000;
+  --color-goldenrod : #ff911c;
+  --color-pink : #ffad32;
 }
-
+.light{
+  --main-font : rgb(255, 255, 255);
+  --bg-color : #ffffff;
+  --btn-bg : #0e0e0e;
+  --color-black : #888888;
+  --color-goldenrod : #ff5f14;
+}
 
 
 
@@ -24,7 +34,7 @@
   margin-top: 1rem;
 }
 .fstext{
-  color: rgb(255, 153, 0);
+  color: var(--color-pink);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-top: 1rem;
   background-color: var(--bg-color);
@@ -121,8 +131,9 @@
 .s1 {
   display: flex;
   flex-wrap: wrap;
-  color: white;
-  background-color: #333;
+  color: var(--font-color);
+  margin-top: 1rem;
+  background-color: var(--bg-color);
   width: 100%;
 }
 
@@ -131,11 +142,11 @@
   padding: 1rem;
   font-size: 2rem;
   margin-top: 5rem;
-  background-color: #333;
+  background-color: var(--bg-color);
 }
 
 .s1-inside h2 {
-  box-shadow: 0.5rem 0.3rem black;
+  box-shadow: 0.5rem 0.3rem var(--color-black);
   display: flex;
   justify-content: center;
   height: 3rem;
@@ -146,12 +157,12 @@
 .s1-inside p {
   font-size: 1.2rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: white;
+  color: var(--font-color);
   text-shadow: 0.1rem 0.1rem 0.1rem rgb(0, 0, 0);
 }
 
 .s1-img {
-  background-color: #333;
+  background-color: var(--bg-color);
   width: 47.5rem;
 }
 
@@ -175,16 +186,18 @@
 }
 
 .hsname {
-  background-color: #333;
+  background-color: var(--bg-color);
   box-shadow: 0.4rem 0.4rem 0.2rem black;
   margin: 0.3125rem;
-  color: white;
+  color: var(--font-color);
   font-size: 1.125rem;
   text-shadow: 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.5);
   padding: 0.3125rem;
   width: 18rem;
+  font-weight: bold;
   flex: auto;
   height: 3rem;
+  border: 0.1rem solid rgb(0, 65, 156);
   border-radius: 1.25rem;
   cursor: pointer;
 }
@@ -192,17 +205,28 @@
 .hsname:hover {
   box-shadow: 0 0 1.25rem rgb(255, 117, 37);
   padding: 0.625rem;
+  
 }
 
 .serve {
   display: flex;
-  color: white;
+  color: var(--main-font);
   justify-content: center;
   border-radius: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
-  background: linear-gradient(rgb(255, 136, 0), rgb(46, 100, 199));
+  background: linear-gradient(rgb(255, 29, 135), rgb(140, 46, 199));
+  width: fit-content;
+  padding: 0.2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
+
+.hp-text{
+  font-size: 1.2rem;
+  color: var(--color-pink);
+}
+
 
 .slider-container {
   order: 1;
@@ -255,7 +279,7 @@
 }
 
 .bottom {
-  color: white;
+  color: var(--font-color);
   display: flex;
   margin: 2rem;
   justify-content: space-between;
@@ -267,10 +291,12 @@
 
 .location {
   display: flex;
+  
   align-items: center;
 }
 
 .address-div {
+  color: var(--font-color);
   text-align: center;
   margin-left: 2rem;
 }
@@ -299,7 +325,7 @@
 
 .wt {
   display: flex;
-  color: greenyellow;
+  color: rgb(113, 188, 0);
   margin-bottom: 0.2rem;
 }
 
@@ -319,12 +345,15 @@
   #root {
     overflow-x: hidden;
   }
+  .hp-text{
+    display: none;
+  }
 
   .wholecontainer {
     display: flex;
     overflow-x: hidden;
     width: 100%;
-    background-color: #333;
+    background-color: var(--bg-color);
     flex-direction: column;
   }
   .fs-inside{
@@ -403,7 +432,7 @@
   }
 
   .hsname {
-    width: 11rem;
+    width: 10rem;
     align-items: center;
     font-size: 1rem;
     padding: 0.1rem;
@@ -434,7 +463,21 @@
   }
   .social{
     display: flex;
+    flex-wrap: wrap;
+    
     padding: 1rem;
+    
+    margin: 0.2rem;
+    
+    width: 22.5rem;
+    margin-left: -3rem;
+  }
+  .wt{
+    margin-left: 2rem;
+  }
+  .fb{
+    margin-top: 0.3rem;
+    margin-left: 2rem;
   }
   
 }

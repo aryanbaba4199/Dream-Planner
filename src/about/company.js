@@ -59,6 +59,8 @@ const topics = [
 
 const TopicList = () => {
   return (
+    <>
+    <div className="gpextrablank"></div>
     <div className="wholeco">
       <div className="company-info">
         <section className="info">
@@ -83,6 +85,7 @@ const TopicList = () => {
         <Nav.Link href="/feedback">Feedback</Nav.Link>
       </div>
     </div>
+    </>
   );
 };
 

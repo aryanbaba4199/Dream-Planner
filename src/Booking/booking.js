@@ -168,7 +168,9 @@ const WeddingBooking = () => {
     <>
       <div className="blank"></div>
       <div className="wholepage">
+        <div className="userdetail">
         <h2 className="usercontainer">Fill Details</h2>
+        </div>
         <div className="userdiv">
           <div className="userdetail">
             <label>Name :</label>
@@ -246,7 +248,7 @@ const WeddingBooking = () => {
 
         <div className="msg-holder">
           <label className="msgtitle">
-            Explain Your Function
+            What's your Budget ?
             <input type="text" value={msg} className="msgbox" onChange={(e)=>setmsg(e.target.value)} />
           </label>
         </div>
@@ -256,6 +258,55 @@ const WeddingBooking = () => {
             Book
           </h2>
         </div>
+        <div className="line"></div>
+          <div className="pg-bottom-holder">
+            <div className="pricespec">
+              <h4 className="pgalbum">Package</h4>
+              <text className="pgalbumtext">
+                Event Planning starts from______
+                <img
+                  src="https://cdn-icons-png.flaticon.com/256/2769/2769454.png"
+                  width="30.5rem"
+                  className="rupee"
+                />{" "}
+                2 Lakh
+              </text>
+            </div>
+            <div className="pricespec">
+              <h4 className="pgalbum">TAX</h4>
+              <text className="pgalbumtext">
+                {/* <img
+                  src="https://cdn-icons-png.flaticon.com/256/2769/2769454.png"
+                  width="30.5rem"
+                  className="rupee"
+                /> */}
+                GST Inclusive
+              </text>
+            </div>
+            <div className="pricespec">
+              <h4 className="pgalbum">Travel Cost</h4>
+              <text className="pgalbumtext">
+                Outstation traverl & stay charges <br />
+                borne by client
+              </text>
+            </div>
+            <div className="pricespec">
+              <h4 className="pgalbum">Payment Term</h4>
+              <text className="pgalbumtext">
+                Booking Time : 10% <br />
+                Execution Time : 80% <br />
+                Before Event : 10%
+              </text>
+            </div>
+            <div className="pricespec">
+              <h4 className="pgalbum">Extra Service</h4>
+              <text className="pgalbumtext">
+                providing extra service <br />
+                cost : 5% per hour of Booking Amount
+              </text>
+            </div>
+            
+          </div>
       </div>
       <ToastContainer/>
     </>

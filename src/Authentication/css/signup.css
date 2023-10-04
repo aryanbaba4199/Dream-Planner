@@ -74,11 +74,12 @@
     color: var(--font-color);
   }
   .btnd{
-    background-color: var(--bg-color);
+    background-color: var(--color-black);
     padding: 1rem;
     border-radius: 1rem;
     &:hover{
-      background-color: var(--shadow-color);
+      background-color: aqua;
+      cursor: pointer;
     }
   }
   

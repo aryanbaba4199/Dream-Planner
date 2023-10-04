@@ -3,20 +3,23 @@
   display: block;
  
 }
+.headroot{
+  margin-bottom: 1rem;
+}
 .services {
     display: flex;
     flex-wrap: wrap;
     width: auto;
     justify-content: space-between;
     margin: 0.5rem;
-    background-color: black;
+    background-color: var(--bg-color);
     box-shadow: 0.5rem 0.5rem, 1rem, rgb(0, 0, 0);
   }
   .wholt{
     display: block;
     width: auto;
-    background-color: black;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--main-font);
   }
   .wholt h1{
     display: flex;
@@ -38,7 +41,7 @@
     width: 22rem;
     height: 18rem;
     border-radius: 10px;
-    background-color: rgb(47, 47, 47);
+    background-color : var();
     
     
   }
@@ -46,7 +49,7 @@
  
   .ts{
     background-color: rgba(217, 97, 27, 0.8); /* Adjust the color and opacity as needed */
-    color: white; /* Set text color to white for better contrast */
+    color: var(--main-font); /* Set text color to white for better contrast */
     padding: 5px 10px; /* Adjust padding as needed */
     border-radius: 10px;
     box-shadow: 0 0 10rem rgb(0, 0, 0);
@@ -54,11 +57,11 @@
     margin-bottom:0.8rem;
   }
   p{
-    background-color: black;
+    background-color: var(--color-pink);
     display: flex;
     justify-content: center;
     font-size: 1.3rem;
-    color: white;
+    color: var(--main-font);
     margin-bottom: 3rem;
     
   }

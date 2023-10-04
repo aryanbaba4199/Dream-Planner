@@ -1,0 +1,85 @@
+.dark{
+    --font-color: #ffffff;
+    --bg-color : #333;
+    --color-red: #e10000;
+    --bg-black : #000000;
+    --text-shadow-color : rgb(241, 157, 1);
+    --button-background-color : linear-gradient(red,blue);
+}
+
+
+
+.gpextrablank{
+    display: none;
+}
+
+.glimpseblank{
+    margin-top: 7rem;
+}
+.create-container{
+    color: var(--font-color);
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.glimpse-container{
+    color: var(--font-color);
+    background-color: var(--bg-color);
+}
+.post-container{
+    margin: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    border-radius: 1rem;
+    flex-wrap: wrap;
+}
+.post-inside{
+    margin: 0.8rem;
+    
+}
+.glimpse-pic{
+    border-radius: 1rem;
+    width : 29rem;
+    height: 30rem;
+    box-shadow: 0rem 0.3rem 0.3rem 0.5rem rgb(235, 0, 0);
+}
+.gp-header{
+    align-items: center;
+    color: var(--font-color);
+    font-style: italic;
+    margin-top: -0.4rem;
+    padding: 1rem;
+    text-shadow: -2px 2px 3px var(--color-red);
+}
+.header-div{
+    display: flex;
+    justify-content: center;
+    background: var(--bg-black);
+    width: fit-content;
+    
+}
+
+@media(max-width:768px){
+    .post-container{
+        display: grid;
+        margin: 0rem;
+    }
+    .glimpse-pic{
+        border-radius: 1rem;
+        width : 100%;
+        height: 70%;
+        box-shadow: 0rem 0.3rem 0.3rem 0.5rem rgb(235, 0, 0);
+    }
+    .glimpseblank{
+        margin-top: 11rem;
+    }
+    .post-inside{
+      margin-top: -8rem;  
+    }
+    .gpextrablank{
+        display: block;
+        margin-top: 10rem;
+    }
+}

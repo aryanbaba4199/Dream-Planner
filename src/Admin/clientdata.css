@@ -13,7 +13,7 @@
 }
 
 .dataintro {
-  color: white;
+  color: var(--main-font);
   margin-top: 1rem;
   display: grid;
   padding: 1rem;
@@ -28,14 +28,14 @@
 }
 
 .datadiv {
-  color: rgb(255, 255, 255);
   height: auto;
+  
   padding: 1rem;
   margin: 1rem;
   margin-left: 8rem;
   margin-right: 8rem;
-  background-color: #333;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  background-color: var(--color-black);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   transition: transform 0.2s ease-in-out;
 }
@@ -57,5 +57,19 @@
    
     border-radius: 50%;
     
+  }
+}
+
+@media(max-width:768px){
+  .dataprovider{
+    width: 100%;
+    border : 2px solid red;
+  }
+  .datadiv{
+    width: 98%;
+    margin: 0.4rem;
+
+    margin-top: 2rem;
+    border: 2px solid green;
   }
 }

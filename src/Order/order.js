@@ -12,8 +12,8 @@ function OrderDetails() {
       const fetchUserData = async () => {
         try {
           const response = await fetch(
-            // `http://localhost:4000/api/userdata/${useremail}`,
-            `https://dpapi-omega.vercel.app/api/userdata/${useremail}`,
+            `http://localhost:4000/api/userdata/${useremail}`,
+            // `https://dpapi-omega.vercel.app/api/userdata/${useremail}`,
             {
               headers: {
                 "Content-Type": "application/json",
@@ -64,8 +64,8 @@ function OrderDetails() {
       <div className="cdblank"></div>
       <div className="dataloader">
         <div className="dataintro">
-          <h1 className="dream">{name}</h1> {/* Display the user's name */}
-          <h2 className="planner">Your Booking Data</h2>
+          <h1 className="dream">{name}'s</h1> {/* Display the user's name */}
+          <h2 className="planner">Booking Data</h2>
         </div>
         <div className="dataprovider">
           <h2>Booking Details</h2>

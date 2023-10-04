@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import './css/signup.css';
 import { useAuth } from './authcontext';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Signin() {
   const [useremail, setUsername] = useState('');
@@ -12,11 +14,16 @@ function Signin() {
     setUsername(e.target.value);
   };
 
+  const signupRedirect = () => {
+    window.location.href = 'https://dreamplanner.in/signup';
+  };
+
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
-
+  
   const signinSubmit = async (e) => {
+    
     e.preventDefault();
 
     try {
@@ -30,20 +37,23 @@ function Signin() {
       });
 
       if (!response.ok) {
+        toast('Email or password is incorrect');
         throw new Error('Network response was not ok');
       }
 
       const responseData = await response.json();
 
       if (responseData.message === 'Authentication successful') {
+        toast('Login Success');
         login(responseData.username, useremail);
         // Redirect the user after successful login
         window.location.href = '/home'; // or use React Router for navigation
       } else {
-        // Handle login error, e.g., show an error message to the user
+        toast('Email or password is incorrect');
         console.error('Login failed:', responseData.message);
       }
     } catch (error) {
+      toast("Try again After some time");
       console.error('Error sending data to the backend:', error);
     }
   };
@@ -87,11 +97,17 @@ function Signin() {
               </h4>
             </div>
           </form>
+          <div className='btndiver'>
+            <h4 className='btnd' 
+            onClick={signupRedirect}
+            >Create New Account</h4>
+          </div>
         </div>
         <div className='signupdp'>
           <h2 className='planner'>planner</h2>
         </div>
       </div>
+      <ToastContainer/>
     </>
   );
 }

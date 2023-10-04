@@ -1,4 +1,22 @@
 /* service.css */
+.dark{
+  --main-font : rgb(255, 255, 255);
+  --bg-color : #333;
+  --btn-bg : #333;
+  --color-black : #000000;
+  --box-shadow : #000000;
+  --color-goldenrod : #ff911c;
+}
+.light{
+  --main-font : rgb(255, 255, 255);
+  --bg-color : #ffeaf7;
+  --btn-bg : #005fb8;
+  --color-black : #2992f4;
+  --color-goldenrod : #e74900;
+}
+
+
+
 .serviceblank{
   height: 8rem;
   display: block;
@@ -8,8 +26,7 @@
     width: auto;
     margin: 1rem;
     text-align: center;
-    color: white;
-    background-color: black;
+    color: var(--main-font);
     padding: 1rem;
     box-shadow: 0 0 2rem rgb(245, 132, 2);
     border-radius: 1.25rem;
@@ -38,11 +55,11 @@
 
 
 .serviceNameBackground {
-  background-color: rgba(217, 97, 27, 0.8);
-  color: white;
+  background-color : var(--color-goldenrod);
+  color: var(--main-font);
   padding: 5px 10px;
   border-radius: 10px;
-  box-shadow: 0 0 100px rgb(0, 0, 0);
+  box-shadow: 0 0 1rem var(--box-shadow);
   text-align: center;
   margin: 1rem;
   margin-bottom: 20px;
@@ -67,6 +84,9 @@
   .serviceNameBackground{
     width: auto;
   }
+  
+  
+
   
   
   

@@ -11,7 +11,7 @@ function photography() {
         <div className="pgtitle">
           <h1 className="dream">Photography</h1>
           <h6 className="slogan">&</h6>
-          <h1 className="planner">Videography</h1>
+          <h1 className="dream">Videography</h1>
         </div>
         <div className="pg2">
           <h3 className="serve">We Provide : </h3>

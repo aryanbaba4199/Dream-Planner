@@ -1,16 +1,18 @@
-.dark-theme{
-  --main-font : white;
+.dark{
+  --main-font : rgb(255, 255, 255);
   --bg-color : #333;
   --btn-bg : #333;
   --color-black : #000000;
+  --box-shadow : #000000;
   --color-goldenrod : #ff911c;
 }
-.light-theme{
-  --main-font : rgb(0, 0, 0);
-  --bg-color : #ffffff;
-  --btn-bg : #ff530a;
-  --color-black : #ffffff;
-  --color-goldenrod : #ff5f14;
+.light{
+  --main-font : rgb(255, 255, 255);
+  --bg-color : #ffeaf7;
+  --btn-bg : #005fb8;
+  --color-black : #2992f4;
+  --color-goldenrod : #e74900;
+  --color-pink : #ff078f;
 }
 
 
@@ -23,6 +25,7 @@
   top: 0;
   left: 0;
   position: fixed;
+  box-shadow: 1rem 1rem 2rem rgb(89, 0, 94);
   background-color: var(--bg-color);
 }
 .part3{
@@ -84,7 +87,7 @@
   cursor: pointer;
   border: 0.1rem solid var(--color-black);
   border-radius: 0.625rem;
-  box-shadow: 0.2rem 0.1rem var(--color-black);
+  box-shadow: 0.2rem 0.1rem var(--box-shadow);
   align-items: center;
   height: 2rem;
   width: 7rem;
@@ -94,7 +97,7 @@
 
 .bio:hover {
   background-color: var(--color-black);
-  color: rgb(251, 251, 251);
+  color: var(--main-font);
   font-style: italic;
   box-shadow: 0.0rem 0.0rem 1.0rem rgb(195, 101, 7);
  
@@ -200,7 +203,9 @@
     height: 5rem;
   }
     
-  
-
-  /* Add any other mobile-specific styling here */
+}
+@media(max-width : 361px){
+  .bio {
+    width: 4rem;
+  }
 }
