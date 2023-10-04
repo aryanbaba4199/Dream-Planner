@@ -1,21 +1,18 @@
 import React, { useEffect, useState } from "react";
 import './clientdata.css'
-import OrderDetails from "../Order/order";
-import { useAuth } from "../Authentication/authcontext";
 
+import { Navigate } from 'react-router-dom'; // Import Redirect
+import { useAuth } from "../Authentication/authcontext";
 
 function AdminPanel() {
   const [data, setData] = useState([]);
   const [userCount, setUserCount] = useState(0);
   const [lastUpdated, setLastUpdated] = useState('');
-  const [packet, setPacket] = useState([]);
 
-  const { user, isAuthenticated } = useAuth();
-  // const usermail = isAuthenticated ? user.email : "";
+  const { useremail, isAuthenticated } = useAuth();
 
   async function fetchDataAndUpdateState() {
     try {
-      // const response = await fetch("http://localhost:4000/api/getdata");
       const response = await fetch("https://dpapi-omega.vercel.app/api/getdata");
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -23,37 +20,28 @@ function AdminPanel() {
       const jsonData = await response.json();
       setData(jsonData);
 
-      // Count the number of users
       setUserCount(jsonData.length);
 
-      // Get the current date and time as the last updated timestamp
       const currentDate = new Date();
       setLastUpdated(currentDate.toLocaleString());
 
-      
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   }
 
   useEffect(() => {
-    fetchDataAndUpdateState(); // Initial fetch
-    const pollingInterval = setInterval(fetchDataAndUpdateState, 3000); // Poll every 3 seconds (adjust as needed)
+    fetchDataAndUpdateState();
+    const pollingInterval = setInterval(fetchDataAndUpdateState, 3000);
 
     return () => {
-      clearInterval(pollingInterval); 
+      clearInterval(pollingInterval);
     };
-    
   }, []);
-  
 
-  
-
-  
   const handleDelete = async (itemId) => {
     try {
-      const response = await fetch(`http://localhost:4000/api/delete/${itemId}`, {
-        // const response = await fetch(`https://dpapi-omega.vercel.app/api/delete/${itemId}`, {
+      const response = await fetch(`https://dpapi-omega.vercel.app/api/delete/${itemId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -69,8 +57,9 @@ function AdminPanel() {
     }
   }
 
-  return (
-    <>  
+  if (isAuthenticated && useremail === "aryanbaba4199@gmail.com") {
+    return (
+      <>
       <div className="cdblank"></div>
       <div className="dataloader">
         <div className="dataintro">
@@ -105,9 +94,11 @@ function AdminPanel() {
           ))}
         </div>
       </div>
-      {packet && <OrderDetails packet={packet}/>} {/* Render OrderDetails component if packet is not null */}
-    </>
-  );
+      </>
+    );
+  } else {
+    return <Navigate to="/" />; // Redirect to home page for other users
+  }
 }
 
 export default AdminPanel;
