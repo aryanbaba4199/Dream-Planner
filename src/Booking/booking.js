@@ -294,7 +294,7 @@ const WeddingBooking = () => {
               <h4 className="pgalbum">Payment Term</h4>
               <text className="pgalbumtext">
                 Booking Time : 10% <br />
-                Execution Time : 80% <br />
+                Before Execution : 80% <br />
                 Before Event : 10%
               </text>
             </div>

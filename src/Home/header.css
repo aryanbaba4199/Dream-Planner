@@ -152,10 +152,11 @@
 
 /* For screens up to 768px (Mobile) */
 @media (max-width: 768px) {
+  
   .auth{
     display: block;
     margin-left: 10rem;
-    margin-top: -4.5rem;
+    margin-top: -4rem;
   }
   .auth1{
     display: none;
@@ -163,10 +164,11 @@
   .wholeheader {
     display: flex;
     flex-wrap: wrap;
-    margin-top: -1rem;
-    height: 12rem;
+    margin-top: -1.7rem;
+    height: 10rem;
     top: 0;
     flex-direction: row;
+    
   }
   .tab{
     display: flex;
@@ -176,7 +178,7 @@
     
   }
   .logo-holder{
-    margin-top: 1rem;
+    margin-top: 1.1rem;
   }
   .sitenamecontainer{
     font-size: 1.3rem;
@@ -192,19 +194,19 @@
   }
   .bio{
     
-    width: 4.2rem;
+    width: 4.5rem;
   }
   
   .username {
     margin-left: 4rem;
   }
   .imglogo{
-    width: 5rem;
-    height: 5rem;
+    width: 3.5rem;
+    height: 3.5rem;
   }
     
 }
-@media(max-width : 361px){
+@media(max-width : 391px){
   .bio {
     width: 4rem;
   }

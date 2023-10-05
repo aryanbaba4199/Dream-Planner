@@ -432,7 +432,7 @@
   }
 
   .hsname {
-    width: 10rem;
+    width: 11.7rem;
     align-items: center;
     font-size: 1rem;
     padding: 0.1rem;
@@ -480,5 +480,10 @@
     margin-left: 2rem;
   }
   
+}
+@media(max-width : 380px){
+  .hsname {
+    width: 10rem;
+  }
 }
 
