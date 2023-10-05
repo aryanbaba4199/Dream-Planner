@@ -58,7 +58,7 @@ function Tabmenu() {
                 </Nav.displayName>
               </div>
               <div className="slogan">
-                <text className="slogan">Your Events, Our Responsibility</text>
+                <text className="slogan">Your Event, Our Responsibility</text>
                 <div className="auth">
                   {isAuthenticated && <text className="username">{name}</text>}
                 </div>

@@ -136,8 +136,8 @@
   display: grid;
 }
 .auth1{
-  margin-right: 2rem;
-  margin-top: 4rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
   
   font-weight: bold;
   text-transform: uppercase;
@@ -156,7 +156,9 @@
   .auth{
     display: block;
     margin-left: 10rem;
-    margin-top: -4rem;
+    margin-top: -3.5rem;
+    display: flex;
+    flex-wrap: wrap;
   }
   .auth1{
     display: none;
@@ -168,6 +170,9 @@
     height: 10rem;
     top: 0;
     flex-direction: row;
+    &:hover{
+      height: 11rem;
+    }
     
   }
   .tab{
