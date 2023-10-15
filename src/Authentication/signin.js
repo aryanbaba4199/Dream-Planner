@@ -68,7 +68,7 @@ function Signin() {
           <h2 className="logo">User Sign-In</h2>
           <form onSubmit={signinSubmit}>
             <div className="form-group">
-              <label htmlFor="username">Username:</label>
+              <label htmlFor="username">Email:</label>
               <input
                 type="text"
                 id="username"

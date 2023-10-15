@@ -33,6 +33,8 @@ function SignUp() {
       });
   
       if (!response.ok) {
+        toast("Redirecting to login page");
+        window.location.href = "https://dreamplanner.in/signin";
         
         console.log("response not ok ");
         throw new Error('Network response was not ok');
@@ -53,7 +55,8 @@ function SignUp() {
         window.location.href = '/signin'; 
       }
     } catch (error) {
-      toast("Try again After some time");
+      toast("Try to log in now");
+      window.location.href = 'https://dreamplanner.in/signin';
       console.error('Error sending data to the backend:', error);
     }
   };
@@ -69,7 +72,7 @@ function SignUp() {
         <h2 className="logo">Sign Up</h2>
         <form onSubmit={signupSubmit}>
           <div className="form-group">
-            <label htmlFor="username">Username:</label>
+            <label htmlFor="username">Name :</label>
             <input
               type="text"
               id="username"
