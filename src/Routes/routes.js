@@ -16,6 +16,7 @@ import Signin from "../Authentication/signin";
 import Signup from "../Authentication/signup";
 import OrderStatus from "../Order/order";
 import Admin from "../Admin/clientdata";
+import Sitemap from "./sitemap";
 
 // Home Service Component
 import Photography from "../HomeService/photography";
@@ -50,6 +51,7 @@ function AppRoutes() {
       <Route path="/admin" element={<Admin />} />
       <Route path="/gallery" element={<Glimpse/>} />
       <Route path="/orderstatus" element={<OrderStatus />} />
+      <Route path="/sitemap" element={<Sitemap />} />
 
       {/* Home service routes */}
       <Route path="/photographyandVideoGraphy" element={<Photography />} />

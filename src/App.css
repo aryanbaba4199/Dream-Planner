@@ -1,10 +1,12 @@
 .dark{
   --bg-color : #333;
   --font : white;
+  background: url(https://img.freepik.com/free-vector/blue-blurred-background-design_1107-117.jpg?w=740&t=st=1696859533~exp=1696860133~hmac=f01939f64102d841a0ec6c056bcc3066157777ec32ad7538ab266307a4552a0b);
 }
 .light{
   --bg-color : #ff99e2;
   --font : black;
+  
 }
 
 

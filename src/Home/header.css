@@ -15,7 +15,11 @@
   --color-pink : #ff078f;
 }
 
+#root{
+  
+  background-image: url("https://img.freepik.com/free-vector/blue-blurred-background-design_1107-117.jpg?w=740&t=st=1696859533~exp=1696860133~hmac=f01939f64102d841a0ec6c056bcc3066157777ec32ad7538ab266307a4552a0b");
 
+}
 
 .wholeheader {
   display: flex;
@@ -27,6 +31,7 @@
   position: fixed;
   box-shadow: 1rem 1rem 2rem rgb(89, 0, 94);
   background-color: var(--bg-color);
+  
 }
 .part3{
   background-color: var(--color-black);

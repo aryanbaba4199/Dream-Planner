@@ -133,7 +133,6 @@
   flex-wrap: wrap;
   color: var(--font-color);
   margin-top: 1rem;
-  background-color: var(--bg-color);
   width: 100%;
 }
 
@@ -142,7 +141,7 @@
   padding: 1rem;
   font-size: 2rem;
   margin-top: 5rem;
-  background-color: var(--bg-color);
+  
 }
 
 .s1-inside h2 {
@@ -162,7 +161,7 @@
 }
 
 .s1-img {
-  background-color: var(--bg-color);
+  
   width: 47.5rem;
 }
 
@@ -187,6 +186,7 @@
 
 .hsname {
   background-color: var(--bg-color);
+  background-image: url("https://img.freepik.com/free-vector/gradient-blur-pink-blue-abstract-background_53876-117324.jpg?size=626&ext=jpg&uid=R72506931&ga=GA1.2.1553071193.1695192744&semt=ais");
   box-shadow: 0.4rem 0.4rem 0.2rem black;
   margin: 0.3125rem;
   color: var(--font-color);
@@ -223,60 +223,12 @@
 }
 
 .hp-text{
-  font-size: 1.2rem;
-  color: var(--color-pink);
+  font-size: 1.5rem;
+  color: var(--font-color);
+  font-weight: 450;
+  font-style: italic;
 }
 
-
-.slider-container {
-  order: 1;
-  overflow: hidden;
-  position: relative;
-  width: 44rem;
-  height: 31rem;
-  margin: 1.25rem;
-  margin-left: 3.125rem;
-  margin-right: 3.125rem;
-  border-radius: 1.25rem;
-}
-
-.slidepic {
-  width: 30rem;
-  height: 31.25rem;
-}
-
-.slider {
-  display: flex;
-  transition: transform 1.5s ease-in-out;
-}
-
-.slidead {
-  flex: 0 0 18.75rem;
-  height: 18.75rem;
-}
-
-.adcontainer {
-  order: 2;
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  width: 18.75rem;
-  height: auto;
-  margin: 1.25rem;
-  border-radius: 1.25rem;
-}
-
-.videoad {
-  margin-top: 3.125rem;
-}
-
-.tp1 {
-  box-shadow: 1rem 1rem black;
-}
-
-.ad2 {
-  float: right;
-}
 
 .bottom {
   color: var(--font-color);
@@ -353,7 +305,7 @@
     display: flex;
     overflow-x: hidden;
     width: 100%;
-    background-color: var(--bg-color);
+    
     flex-direction: column;
   }
   .fs-inside{
@@ -366,7 +318,8 @@
     margin-bottom: 1rem;
   }
   .fsheading{
-    width: 19rem;
+    width: 24.2rem;
+    margin: 0.2rem;
   }
   .fsimg{
     width: auto;
@@ -423,13 +376,9 @@
     height: 30rem;
   }
 
-  .adcontainer {
-    order: 2;
-  }
+ 
 
-  .slide {
-    width: auto;
-  }
+  
 
   .hsname {
     width: 11.7rem;
@@ -481,7 +430,7 @@
   }
   
 }
-@media(max-width : 398px){
+@media(max-width : 400px){
   .hsname {
     width: 10rem;
   }

@@ -33,7 +33,7 @@ function SignUp() {
       });
   
       if (!response.ok) {
-        toast('Email Already Registered');
+        
         console.log("response not ok ");
         throw new Error('Network response was not ok');
       }
@@ -46,10 +46,11 @@ function SignUp() {
         
         
         console.log('Registration successful');
+        window.location.href = '/home'; // or use React Router for navigation
       } else if (responseData.message === 'You are already registered') {
         
         console.log('Email is already registered');
-        
+        window.location.href = '/signin'; 
       }
     } catch (error) {
       toast("Try again After some time");

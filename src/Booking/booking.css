@@ -18,8 +18,6 @@
     flex-direction: row;
     width: auto;
     
-    background-color: var(--bg-color);
-    color: var(--main-font);
 }
 
 .blank {
@@ -41,8 +39,7 @@
     width: auto;
     margin: 1rem;
     text-align: center;
-    color: var(--main-font);
-    background-color: var(--color-black);
+    color: black;
     padding: 1rem;
     box-shadow: 0 0 2rem rgb(255, 35, 248);
     border-radius: 1.25rem;
@@ -73,7 +70,7 @@
 
 .usercontainer {
     display: flex;
-    color: var(--main-font);
+    
     justify-content: center;
 }
 

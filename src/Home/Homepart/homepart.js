@@ -127,10 +127,12 @@ const ImageSlider = () => {
         <div className="s1-inside">
           <h2>Mandap Theme</h2>
           <text className="hp-text">
-            "Our mandap theme work meticulously crafted by our talented theme
+            Our mandap theme work meticulously crafted by our talented theme
             designers. We specialize in creating enchanting and personalized
             mandap setups that reflect the unique vision and cultural
-            preferences of each couple."
+            preferences of each couple.
+            We can design mutiple types of mandap and pendle decoration.
+            our designers can also design themes according to your choice.
           </text>
         </div>
         <div className="s1-img">

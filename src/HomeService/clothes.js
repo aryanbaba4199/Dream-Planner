@@ -1,8 +1,14 @@
-import React from 'react'
+import React from 'react';
 
 function clothes() {
   return (
-    <div>clothes</div>
+    <>
+    <div className='pgblank'></div>
+    <h5 className='dream'>
+      Thank you<br/>
+      Your record has been recorder...
+    </h5>
+    </>
   )
 }
 

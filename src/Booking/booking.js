@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./booking.css";
 import { useAuth } from "../Authentication/authcontext";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const WeddingBooking = () => {
   const [name, setName] = useState("");
@@ -12,9 +12,8 @@ const WeddingBooking = () => {
   const [selectedFunctionType, setSelectedFunctionType] = useState("");
   const [services, setServices] = useState([]);
   const [bookingConfirmed, setBookingConfirmed] = useState(false);
-  
-  const [msg , setmsg] = useState("");
-  
+
+  const [msg, setmsg] = useState("");
 
   const functionType = [
     {
@@ -96,7 +95,7 @@ const WeddingBooking = () => {
         setAddress(`Latitude: ${latitude}, Longitude: ${longitude}`);
       });
     } else {
-      alert('Geolocation is not supported by your browser.');
+      alert("Geolocation is not supported by your browser.");
     }
   };
 
@@ -112,7 +111,7 @@ const WeddingBooking = () => {
       setServices(services.filter((service) => service !== serviceName));
     }
   };
-  const {useremail, isAuthenticated} = useAuth();
+  const { useremail, isAuthenticated } = useAuth();
   const handleBook = async () => {
     toast("Booking In process...");
 
@@ -127,7 +126,7 @@ const WeddingBooking = () => {
     console.log(email);
     const bookingData = {
       name,
-      email, 
+      email,
       address,
       mobile,
       selectedServices: services,
@@ -135,21 +134,22 @@ const WeddingBooking = () => {
       functionType,
       time,
       status,
-      payment
-      
+      payment,
     };
-    
+    window.location.href = "orderstatus";
 
     try {
       // const response = await fetch("http://localhost:4000/api/bookings", {
-      const response = await fetch("https://dpapi-omega.vercel.app/api/bookings", {
-        
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(bookingData),
-      });
+      const response = await fetch(
+        "https://dpapi-omega.vercel.app/api/bookings",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(bookingData),
+        }
+      );
 
       if (response.ok) {
         console.log("Success");
@@ -162,14 +162,13 @@ const WeddingBooking = () => {
       console.log(error);
     }
   };
- 
 
   return (
     <>
       <div className="blank"></div>
       <div className="wholepage">
         <div className="userdetail">
-        <h2 className="usercontainer">Fill Details</h2>
+          <h2 className="usercontainer">Fill Details</h2>
         </div>
         <div className="userdiv">
           <div className="userdetail">
@@ -201,8 +200,6 @@ const WeddingBooking = () => {
               onChange={(e) => setMobile(e.target.value)}
             />
           </div>
-          
-          
         </div>
 
         <div className="bookingcontainer">
@@ -249,7 +246,12 @@ const WeddingBooking = () => {
         <div className="msg-holder">
           <label className="msgtitle">
             What's your Budget ?
-            <input type="text" value={msg} className="msgbox" onChange={(e)=>setmsg(e.target.value)} />
+            <input
+              type="text"
+              value={msg}
+              className="msgbox"
+              onChange={(e) => setmsg(e.target.value)}
+            />
           </label>
         </div>
 
@@ -259,56 +261,55 @@ const WeddingBooking = () => {
           </h2>
         </div>
         <div className="line"></div>
-          <div className="pg-bottom-holder">
-            <div className="pricespec">
-              <h4 className="pgalbum">Package</h4>
-              <text className="pgalbumtext">
-                Event Planning starts from______
-                <img
-                  src="https://cdn-icons-png.flaticon.com/256/2769/2769454.png"
-                  width="30.5rem"
-                  className="rupee"
-                />{" "}
-                2 Lakh
-              </text>
-            </div>
-            <div className="pricespec">
-              <h4 className="pgalbum">TAX</h4>
-              <text className="pgalbumtext">
-                {/* <img
+        <div className="pg-bottom-holder">
+          <div className="pricespec">
+            <h4 className="pgalbum">Package</h4>
+            <text className="pgalbumtext">
+              Event Planning starts from______
+              <img
+                src="https://cdn-icons-png.flaticon.com/256/2769/2769454.png"
+                width="30.5rem"
+                className="rupee"
+              />{" "}
+              2 Lakh
+            </text>
+          </div>
+          <div className="pricespec">
+            <h4 className="pgalbum">TAX</h4>
+            <text className="pgalbumtext">
+              {/* <img
                   src="https://cdn-icons-png.flaticon.com/256/2769/2769454.png"
                   width="30.5rem"
                   className="rupee"
                 /> */}
-                GST Inclusive
-              </text>
-            </div>
-            <div className="pricespec">
-              <h4 className="pgalbum">Travel Cost</h4>
-              <text className="pgalbumtext">
-                Outstation traverl & stay charges <br />
-                borne by client
-              </text>
-            </div>
-            <div className="pricespec">
-              <h4 className="pgalbum">Payment Term</h4>
-              <text className="pgalbumtext">
-                Booking Time : 10% <br />
-                Before Execution : 80% <br />
-                Before Event : 10%
-              </text>
-            </div>
-            <div className="pricespec">
-              <h4 className="pgalbum">Extra Service</h4>
-              <text className="pgalbumtext">
-                providing extra service <br />
-                cost : 5% per hour of Booking Amount
-              </text>
-            </div>
-            
+              GST Inclusive
+            </text>
           </div>
+          <div className="pricespec">
+            <h4 className="pgalbum">Travel Cost</h4>
+            <text className="pgalbumtext">
+              Outstation traverl & stay charges <br />
+              borne by client
+            </text>
+          </div>
+          <div className="pricespec">
+            <h4 className="pgalbum">Payment Term</h4>
+            <text className="pgalbumtext">
+              Booking Time : 10% <br />
+              Before Execution : 80% <br />
+              Before Event : 10%
+            </text>
+          </div>
+          <div className="pricespec">
+            <h4 className="pgalbum">Extra Service</h4>
+            <text className="pgalbumtext">
+              providing extra service <br />
+              cost : 5% per hour of Booking Amount
+            </text>
+          </div>
+        </div>
       </div>
-      <ToastContainer/>
+      <ToastContainer />
     </>
   );
 };
